@@ -135,4 +135,9 @@ alias wgeto="wget -q -O -"
 alias sha1="openssl dgst -sha1"
 alias sha2="openssl dgst -sha256"
 alias qs-bounce="osascript ~/Library/Scripts/qs-bounce.scpt"
+alias rm="rm -iv"
+alias ps="sudo ps -eac"
+alias zip="myzip -r"
+#SVN: show my last 50 entries into the svn log
+alias svnlog="svn log --limit 100 | grep -B1 -A3 '| cmurphy |'"
 ############################################################
