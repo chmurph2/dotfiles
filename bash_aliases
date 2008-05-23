@@ -78,7 +78,7 @@ function st {
 ############################################################
 
 # Remove all .svn folders from directory recursively
-alias svn-clean='find . -name .svn -print0 | xargs -0 rm -rf' 
+alias svn-clean='find . -name .svn -print0 | xargs -0 rm -rf'
 
 ############################################################
 ## OS X
@@ -90,12 +90,16 @@ alias dstore-clean='find . -type f -name .DS_Store -print0 | xargs -0 rm'
 # Track who is listening to your iTunes music
 alias whotunes='lsof -r 2 -n -P -F n -c iTunes -a -i TCP@`hostname`:3689'
 
+# Java 1.5 home
+alias cdjava="cd /system/Library/Frameworks/JavaVM.framework/Versions/1.5/Home"
+
 ############################################################
 ## Ruby
 ############################################################
 
-alias a="autotest"
+alias a="autotest -f"
 alias smp="staticmatic preview ."
+alias gem="sudo gem"
 
 export GEMS=/opt/local/lib/ruby/gems/1.8/gems
 function findgem {
@@ -121,6 +125,7 @@ function gemdoc {
 alias ss="script/server"
 alias sg="script/generate"
 alias sc="script/console"
+alias sd="script/dbconsole"
 
 ############################################################
 ## Miscellaneous
@@ -129,5 +134,5 @@ alias sc="script/console"
 alias wgeto="wget -q -O -"
 alias sha1="openssl dgst -sha1"
 alias sha2="openssl dgst -sha256"
-
+alias qs-bounce="osascript ~/Library/Scripts/qs-bounce.scpt"
 ############################################################
