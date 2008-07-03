@@ -128,6 +128,15 @@ alias sc="script/console"
 alias sd="script/dbconsole"
 
 ############################################################
+## Tomcat
+############################################################
+# alias startt="sudo /opt/local/var/macports/software/tomcat5/5.5.25_0/opt/local/share/java/tomcat5/bin/startup.sh"
+# alias stopt="sudo /opt/local/var/macports/software/tomcat5/5.5.25_0/opt/local/share/java/tomcat5/bin/shutdown.sh"
+alias startt="sudo /opt/tomcat/bin/startup.sh"
+alias stopt="sudo /opt/tomcat/bin/shutdown.sh"
+
+
+############################################################
 ## Miscellaneous
 ############################################################
 
