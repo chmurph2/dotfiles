@@ -137,6 +137,7 @@ alias ss="script/server"
 alias sg="script/generate"
 alias sc="script/console"
 alias sd="script/dbconsole"
+alias rr="touch /tmp/restart.txt" # restart all passenger-controller Rails apps
 
 ############################################################
 ## Tomcat
