@@ -35,6 +35,7 @@
 (require 'rmm-rails)
 (require 'rmm-haml)
 (require 'rmm-javascript)
+(require 'rmm-erlang)
 
 (require 'rmm-csv)
 
@@ -42,5 +43,10 @@
 (require 'rmm-zoom)
 (require 'rmm-pastie)
 (require 'rmm-recentf)
+(require 'rmm-ditz)
 
+(require 'rmm-utf-8)
 (require 'rmm-global-keys)
+
+(require 'rmm-twitter)
+(require 'rmm-private)

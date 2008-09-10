@@ -32,6 +32,7 @@ alias lal="ls -al"
 ## Git
 ############################################################
 
+alias g="git"
 alias gb="git branch -a -v"
 alias gc="git commit -v"
 alias gca="git commit -v -a"
@@ -41,6 +42,8 @@ alias glr="git pull --rebase"
 alias gp="git push"
 alias gs="git status"
 alias ga="git add"
+alias gg="git log --pretty=oneline"
+alias ggs="git log --stat"
 
 # Useful report of what has been committed locally but not yet pushed to another
 # branch.  Defaults to the remote origin/master.  The u is supposed to stand for
@@ -62,7 +65,7 @@ function gco {
   if [ -z "$1" ]; then
     git checkout master
   else
-    git checkout $1
+    git checkout $*
   fi
 }
 
@@ -109,9 +112,8 @@ alias cdjava="cd /system/Library/Frameworks/JavaVM.framework/Versions/1.5/Home"
 ## Ruby
 ############################################################
 
-alias a="autotest -f"
+alias a="autotest -q -f"
 alias smp="staticmatic preview ."
-alias gem="sudo gem"
 
 export GEMS=/opt/local/lib/ruby/gems/1.8/gems
 function findgem {
@@ -163,3 +165,5 @@ alias zip="myzip -r"
 #SVN: show my last 50 entries into the svn log
 alias svnlog="svn log --limit 100 | grep -B1 -A3 '| cmurphy |'"
 ############################################################
+alias d='ditz'
+alias tl='tail -f log/development.log'
