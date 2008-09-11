@@ -5,7 +5,6 @@
 	co = checkout
 	st = status
 	br = branch
-	fm = !"git fetch origin -v; git fetch rmm5t -v; git merge origin/master rmm5t/master"
 [apply]
 	whitespace = nowarn
 [color]
