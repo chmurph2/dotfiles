@@ -139,22 +139,13 @@ function gemdoc {
 alias ss="script/server"
 alias sg="script/generate"
 alias sc="script/console"
-alias sd="script/dbconsole"
-alias rr="touch /tmp/restart.txt" # restart all passenger-controller Rails apps
-
-############################################################
-## Tomcat
-############################################################
-# alias startt="sudo /opt/local/var/macports/software/tomcat5/5.5.25_0/opt/local/share/java/tomcat5/bin/startup.sh"
-# alias stopt="sudo /opt/local/var/macports/software/tomcat5/5.5.25_0/opt/local/share/java/tomcat5/bin/shutdown.sh"
-alias startt="sudo /opt/tomcat/bin/startup.sh"
-alias stopt="sudo /opt/tomcat/bin/shutdown.sh"
-
+alias tl='tail -f log/development.log'
 
 ############################################################
 ## Miscellaneous
 ############################################################
 
+alias grep='GREP_COLOR="1;37;41" grep --color=auto'
 alias wgeto="wget -q -O -"
 alias sha1="openssl dgst -sha1"
 alias sha2="openssl dgst -sha256"
@@ -165,5 +156,3 @@ alias zip="myzip -r"
 #SVN: show my last 50 entries into the svn log
 alias svnlog="svn log --limit 100 | grep -B1 -A3 '| cmurphy |'"
 ############################################################
-alias d='ditz'
-alias tl='tail -f log/development.log'
