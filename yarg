@@ -1,0 +1,10 @@
+Yarg::Rails.new do |rg|
+  rg.scm :git, :using => :submodules
+  rg.delete "public/index.html"
+  rg.delete "public/dispatch.*"
+  rg.plugin "git://github.com/thoughtbot/shoulda.git"
+  rg.plugin "git://github.com/nex3/haml.git"
+  rg.plugin "git://github.com/rmm5t/strip_attributes.git"
+  rg.plugin "git://github.com/github/hubahuba.git"
+  rg.freeze :version => :edge
+end
