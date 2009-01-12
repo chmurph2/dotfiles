@@ -155,4 +155,6 @@ alias ps="sudo ps -eac"
 alias zip="myzip -r"
 #SVN: show my last 50 entries into the svn log
 alias svnlog="svn log --limit 100 | grep -B1 -A3 '| cmurphy |'"
+# quicklook something from Terminal.app
+alias ql='qlmanage -p "$@" >& /dev/null'
 ############################################################
