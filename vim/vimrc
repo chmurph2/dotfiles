@@ -305,10 +305,10 @@ set complete-=k complete+=k
 " ------------------------------------------------------------
 
 " allows moving between split windows much faster and more intuitive
-map <C-J> <C-W>j<C-W>_
-map <C-K> <C-W>k<C-W>_
-map <C-H> <C-W>h<C-W>_
-map <C-L> <C-W>l<C-W>_
+map <C-J> <C-W>j
+map <C-K> <C-W>k
+map <C-H> <C-W>h
+map <C-L> <C-W>l
 
 " <F7> toggles hidden characters
 map  <F7> :set list!<CR>
