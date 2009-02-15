@@ -1,4 +1,4 @@
-" -----------------------------------------------------------------------------
+"" -----------------------------------------------------------------------------
 " |                            VIM Settings                                   |
 " |                   (see gvimrc for gui vim settings)                       |
 " -----------------------------------------------------------------------------
@@ -46,7 +46,7 @@ set cursorline
 
 set wrapscan                    " (ws) allows search to wrap to top of document when the bottom has been hit
 set incsearch                   " (is) highlights what you are searching for as you type
-set hlsearch                    " (hls) highlights all instances of the last searched string
+set nohlsearch                    " (hls) highlights all instances of the last searched string
 set ignorecase                  " (ic) ignores case in search patterns
 set smartcase                   " (scs) don't ignore case when the search pattern has uppercase
 set infercase                   " (inf) during keyword completion, fix case of new word (when ignore case is on)
@@ -54,7 +54,9 @@ set infercase                   " (inf) during keyword completion, fix case of n
 "set foldcolumn=6                " (fdc) width of fold column (to see where folds are)
 "set foldmethod=indent           " (fdm) creates a fold for every level of indentation
 "set foldlevel=99                " (fdl) when file is opened, don't close any folds
-set nofoldenable                  " (fen) enables or disables folding
+set foldenable                  " (fen) enables or disables folding
+map f /d<Return><S-v>%zf
+map F zo
 
 "set t_Co=256 " 256 colors
 set background=dark
@@ -152,7 +154,8 @@ map ,b :FuzzyFinderBuffer<CR>
 "let g:AutoComplPop_CompleteOption = '.,w,b,u,t,k'
 "set complete=.
 let g:AutoComplPop_IgnoreCaseOption = 0
-let g:AutoComplPop_BehaviorKeywordLength = 2
+let g:AutoComplPop_BehaviorKeywordLength = 4
+let g:AutoComplPop_MappingDriven=1
 
 " -----------------------------------------------------------------------------
 " |                             OS Specific                                   |
