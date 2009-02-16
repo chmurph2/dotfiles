@@ -2,7 +2,7 @@
 # ==================================================================
 # Author: Jamis Buck (jamis@jamisbuck.org)
 # Date: 2008-10-09
-# 
+#
 # This file is in the public domain. Usage, modification, and
 # redistribution of this file are unrestricted.
 # ==================================================================
@@ -11,9 +11,9 @@
 # The "fuzzy" file finder provides a way for searching a directory
 # tree with only a partial name. This is similar to the "cmd-T"
 # feature in TextMate (http://macromates.com).
-# 
+#
 # Usage:
-# 
+#
 #   finder = FuzzyFileFinder.new
 #   finder.search("app/blogcon") do |match|
 #     puts match[:highlighted_path]
@@ -24,10 +24,10 @@
 # expression internally, so that any file that contains those
 # characters in that order (even if there are other characters
 # in between) will match.
-# 
+#
 # In other words, "app/blogcon" would match any of the following
 # (parenthesized strings indicate how the match was made):
-# 
+#
 # * (app)/controllers/(blog)_(con)troller.rb
 # * lib/c(ap)_(p)ool/(bl)ue_(o)r_(g)reen_(co)loratio(n)
 # * test/(app)/(blog)_(con)troller_test.rb
@@ -170,7 +170,7 @@ class FuzzyFileFinder
   #   the file matches the given pattern. A score of 1 means the
   #   pattern matches the file exactly.
   def search(pattern, &block)
-    pattern.strip!
+    pattern.gsub!(" ", "")
     path_parts = pattern.split("/")
     path_parts.push "" if pattern[-1,1] == "/"
 
@@ -351,3 +351,4 @@ class FuzzyFileFinder
       return roots.first.name
     end
 end
+
