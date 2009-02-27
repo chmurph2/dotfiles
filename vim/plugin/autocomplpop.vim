@@ -401,7 +401,7 @@ function! s:PopupFeeder.feed()
   let cursor_moved = self.check_cursor_and_update()
   if exists('self.behavs[0]') && self.behavs[0].repeat
     let self.behavs = (self.behavs[0].repeat ? [ self.behavs[0] ] : [])
-  elseif cursor_moved 
+  elseif cursor_moved
     let self.behavs = copy(exists('g:AutoComplPop_Behavior[&filetype]') ? g:AutoComplPop_Behavior[&filetype]
           \                                                             : g:AutoComplPop_Behavior['*'])
   else
@@ -532,7 +532,7 @@ endfunction
 " GLOBAL OPTIONS: ======================================================= {{{1
 "...........................................................................
 if !exists('g:AutoComplPop_NotEnableAtStartup')
-  let g:AutoComplPop_NotEnableAtStartup = 0
+  let g:AutoComplPop_NotEnableAtStartup = 1
 endif
 "...........................................................................
 if !exists('g:AutoComplPop_MappingDriven')
@@ -552,7 +552,7 @@ if !exists('g:AutoComplPop_CompleteoptPreview')
 endif
 ".........................................................................
 if !exists('g:AutoComplPop_BehaviorKeywordLength')
-  let g:AutoComplPop_BehaviorKeywordLength = 2
+  let g:AutoComplPop_BehaviorKeywordLength = -1
 endif
 ".........................................................................
 if !exists('g:AutoComplPop_BehaviorFileLength')
