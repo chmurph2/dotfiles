@@ -1,15 +1,21 @@
-" -----------------------------------------------------------------------------  
+" -----------------------------------------------------------------------------
 " |                            VIM Settings                                   |
 " |                              GUI stuff                                    |
-" -----------------------------------------------------------------------------  
+" -----------------------------------------------------------------------------
 
 
 " OS Specific *****************************************************************
 if has("gui_macvim")
 
   set fuoptions=maxvert,maxhorz " fullscreen options (MacVim only), resized window when changed to fullscreen
-  set guifont=Monaco:h13
+  set guifont=Monaco:h12
   set guioptions-=T  " remove toolbar
+  " Unmap Apple+T
+  macmenu &File.New\ Tab key=<nop>
+  " FuzzyFinder
+  nnoremap <D-t> :FuzzyFinderFile<CR>
+  " NerdTree
+  nnoremap <D-e> :NERDTreeToggle<CR>
 
 elseif has("gui_gtk2")
 
@@ -26,8 +32,8 @@ set anti " Antialias font
 "set transparency=0
 
 " Default size of window
-set columns=120 
+set columns=120
 set lines=50
 
-" Tab headings 
+" Tab headings
 set gtl=%t gtt=%F
