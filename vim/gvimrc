@@ -13,7 +13,7 @@ if has("gui_macvim")
   " Unmap Apple+T
   macmenu &File.New\ Tab key=<nop>
   " FuzzyFinder
-  nnoremap <D-t> :FuzzyFinderFile<CR>
+  nnoremap <D-t> :FuzzyFinderTextMate<CR>
   " NerdTree
   nnoremap <D-e> :NERDTreeToggle<CR>
 
