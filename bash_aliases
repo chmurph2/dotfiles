@@ -142,6 +142,13 @@ alias sc="script/console"
 alias tl='tail -f log/development.log'
 
 ############################################################
+## Jekyll (blogging)
+############################################################
+
+alias j="jekyll --pygments --lsi"
+alias js="jekyll --server --auto --pygments --lsi"
+
+############################################################
 ## Miscellaneous
 ############################################################
 
