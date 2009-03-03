@@ -44,6 +44,9 @@ alias gs="git status"
 alias ga="git add"
 alias gg="git log --pretty=oneline"
 alias ggs="git log --stat"
+alias gh="github"
+alias gsl="git shortlog -sn"
+alias gw="git whatchanged"
 
 # Useful report of what has been committed locally but not yet pushed to another
 # branch.  Defaults to the remote origin/master.  The u is supposed to stand for
@@ -94,6 +97,8 @@ alias de='ditz edit '
 
 # Remove all .svn folders from directory recursively
 alias svn-clean='find . -name .svn -print0 | xargs -0 rm -rf'
+# Show my last 50 entries into the svn log
+alias svnlog="svn log --limit 100 | grep -B1 -A3 '| cmurphy |'"
 
 ############################################################
 ## OS X
@@ -112,10 +117,11 @@ alias cdjava="cd /system/Library/Frameworks/JavaVM.framework/Versions/1.5/Home"
 ## Ruby
 ############################################################
 
+alias r="rake"
 alias a="autotest -q -f"
 alias smp="staticmatic preview ."
 
-export GEMS=/opt/local/lib/ruby/gems/1.8/gems
+export GEMS=`gem env gemdir`/gems
 function findgem {
   echo `ls $GEMS | grep -i $1 | sort | tail -1`
 }
@@ -152,16 +158,19 @@ alias js="jekyll --server --auto --pygments --lsi"
 ## Miscellaneous
 ############################################################
 
+if [ -f /Applications/Emacs.app/Contents/MacOS/Emacs ]; then
+  alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs'
+fi
+
 alias grep='GREP_COLOR="1;37;41" grep --color=auto'
 alias wgeto="wget -q -O -"
 alias sha1="openssl dgst -sha1"
 alias sha2="openssl dgst -sha256"
+alias flushdns='dscacheutil -flushcache'
 alias qs-bounce="osascript ~/Library/Scripts/qs-bounce.scpt"
 alias rm="rm -iv"
 alias ps="sudo ps -eac"
 alias zip="myzip -r"
-#SVN: show my last 50 entries into the svn log
-alias svnlog="svn log --limit 100 | grep -B1 -A3 '| cmurphy |'"
 # quicklook something from Terminal.app
 alias ql='qlmanage -p "$@" >& /dev/null'
 ############################################################

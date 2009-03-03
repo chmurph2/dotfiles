@@ -1,0 +1,9 @@
+.DS_Store
+auto-save-list
+backups
+vendor
+personal
+schemas
+url
+*.elc
+my-private.el
