@@ -84,10 +84,9 @@ function st {
 ## Git SVN
 ############################################################
 
-alias gs="git svn"
-alias gsr="git svn rebase"
+alias gslr="git svn rebase"
 alias gsp="git svn dcommit"
-alias gsl="git svn log"
+alias gsg="git svn log"
 alias gsi="git svn info"
 
 ############################################################
