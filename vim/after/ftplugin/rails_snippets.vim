@@ -46,6 +46,7 @@ exec "Snippet rf render :file => \"".st."filepath".et."\"".st.et
 exec "Snippet lica <%= link_to \"".st.et."\", :controller => \"".st."items".et."\", :action => \"".st."index".et."\" %>".st.et
 exec "Snippet liai <%= link_to \"".st.et."\", :action => \"".st."edit".et."\", :id => ".st.et." %>".st.et
 exec "Snippet reai redirect_to :action => \"".st."show".et."\", :id => ".st.et
+exec "Snippet log logger.debug \"".st.et."\"".st.et
 exec "Snippet logi logger.info \"".st.et."\"".st.et
 exec "Snippet marc add_column \"".st."table".et."\", \"".st."column".et."\", :".st."string".et."<CR><CR>".st.et."<CR>".st.et
 exec "Snippet rps render :partial => \"".st."item".et."\", :status => ".st.et
