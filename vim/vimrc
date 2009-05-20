@@ -55,13 +55,13 @@ set infercase                   " (inf) during keyword completion, fix case of n
 "set foldmethod=indent           " (fdm) creates a fold for every level of indentation
 "set foldlevel=99                " (fdl) when file is opened, don't close any folds
 set foldenable                  " (fen) enables or disables folding
-map f /d<Return><S-v>%zf
+" map f /d<Return><S-v>%zf
 map F zo
 
 "set t_Co=256 " 256 colors
 set background=dark
 syntax on " syntax highlighting
-colorscheme ir_black
+colorscheme railscasts
 
 " File Stuff ******************************************************************
 filetype plugin indent on
