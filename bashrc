@@ -148,6 +148,8 @@ export HISTIGNORE="&:pwd:ls:ll:lal:[bf]g:exit:rm*:sudo rm*"
 export HISTCONTROL=erasedups
 # increase the default size from only 1,000 items
 export HISTSIZE=10000
+# Add timestamp to history
+# export HISTTIMEFORMAT="%F %T"
 
 # By default up/down are bound to previous-history
 # and next-history respectively. The following does the
