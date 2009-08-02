@@ -306,6 +306,11 @@ set complete-=k
 " ------------------------------------------------------------
 
 " allows moving between split windows much faster and more intuitive
+map <C-up>    <C-W><up>
+map <C-down>  <C-W><down>
+map <C-left>  <C-W><left>
+map <C-right> <C-W><right>
+
 map <C-J> <C-W>j
 map <C-K> <C-W>k
 map <C-H> <C-W>h
