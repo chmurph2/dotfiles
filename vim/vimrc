@@ -136,7 +136,7 @@ let NERDTreeMouseMode=1
 " fuzzyfinder_textmate ********************************************************
 map ,f :FuzzyFinderTextMate<CR>
 map ,b :FuzzyFinderBuffer<CR>
-"let g:fuzzy_ignore = '.o;.obj;.bak;.exe;.pyc;.pyo;.DS_Store;.db'
+let g:fuzzy_ignore = '.git/*;*.swp;public/backend/*'
 
 " Fuzzyfinder *****************************************************************
 " Fuzzy finder rocks, like Command-T in TextMate (buggy at moment, fix!!)
