@@ -51,12 +51,11 @@ set ignorecase                  " (ic) ignores case in search patterns
 set smartcase                   " (scs) don't ignore case when the search pattern has uppercase
 set infercase                   " (inf) during keyword completion, fix case of new word (when ignore case is on)
 
-"set foldcolumn=6                " (fdc) width of fold column (to see where folds are)
-"set foldmethod=indent           " (fdm) creates a fold for every level of indentation
-"set foldlevel=99                " (fdl) when file is opened, don't close any folds
+set foldcolumn=0                " (fdc) width of fold column (to see where folds are)
+set foldmethod=syntax           " (fdm) creates folds that make sense for the language
 set foldenable                  " (fen) enables or disables folding
-" map f /d<Return><S-v>%zf
-map F zo
+" unfold all folds when a file is opened
+autocmd  BufRead * normal zR
 
 "set t_Co=256 " 256 colors
 set background=dark
