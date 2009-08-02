@@ -359,9 +359,9 @@ endfunction
 
 " Removes superfluous white space from the end of a line
 function! RemoveWhiteSpace()
-    m'
-    :%s/\s*$//g
-    ''
+    let save_cursor = getpos(".")
+    %s/\s*$//g
+    call setpos('.', save_cursor)
 endfunction
 
 " Command Reference
