@@ -38,8 +38,14 @@ set equalalways                 " Multiple windows, when created, are equal in s
 set splitbelow splitright
 
 "Vertical split then hop to new buffer
-:noremap ,v :vsp^M^W^W<cr>
-:noremap ,h :split^M^W^W<cr>
+noremap ,v :vsp^M^W^W<cr>
+noremap ,h :split^M^W^W<cr>
+
+" Navigating tags now just like moving forward and back through pages in a web browser
+" use Apple+] to jump to a tag
+map <D-]> <C-]>
+" use Apple+[ to jump back up the tag stack
+map <D-[> <C-t>
 
 set cursorline
 "set cursorcolumn
