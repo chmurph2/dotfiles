@@ -37,6 +37,8 @@ set scrolloff=2
 set equalalways                 " Multiple windows, when created, are equal in size
 set splitbelow splitright
 
+set shellcmdflag=-lc            " Force shell commands to load personal bash init scripts
+
 "Vertical split then hop to new buffer
 noremap ,v :vsp^M^W^W<cr>
 noremap ,h :split^M^W^W<cr>
@@ -61,7 +63,7 @@ set foldcolumn=0                " (fdc) width of fold column (to see where folds
 set foldmethod=syntax           " (fdm) creates folds that make sense for the language
 set foldenable                  " (fen) enables or disables folding
 " unfold all folds when a file is opened
-autocmd  BufRead * normal zR
+autocmd  BufWinEnter * normal zR
 
 "set t_Co=256 " 256 colors
 set background=dark
