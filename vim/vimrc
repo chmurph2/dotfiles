@@ -70,6 +70,11 @@ set background=dark
 syntax on " syntax highlighting
 colorscheme railscasts
 
+" TagList plugin config
+let Tlist_Show_One_File = 1   " Show only one file in the taglist at a time
+let Tlist_Sort_Type = "name"  " Sort tag list by names rather than order they are defined
+map <D-i> :TlistToggle<CR>
+
 " File Stuff ******************************************************************
 filetype plugin indent on
 " To show current filetype use: set filetype
