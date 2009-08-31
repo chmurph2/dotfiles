@@ -10,6 +10,10 @@ fi
 ## PATH
 ############################################################
 
+if [ -d /usr/local/bin ] ; then
+  PATH="/usr/local/bin:${PATH}"
+fi
+
 if [ -d ~/bin ] ; then
   PATH="~/bin:${PATH}"
 fi
@@ -18,16 +22,12 @@ if [ -d ~/bin/private ] ; then
   PATH="~/bin/private:${PATH}"
 fi
 
-if [ -d /usr/local/bin ] ; then
-  PATH="${PATH}:/usr/local/bin"
-fi
-
 # MacPorts
 if [ -d /opt/local/bin ] ; then
-  PATH="/opt/local/bin:${PATH}"
+  PATH="${PATH}:/opt/local/bin"
 fi
 if [ -d /opt/local/sbin ] ; then
-  PATH="/opt/local/sbin:${PATH}"
+  PATH="${PATH}:/opt/local/sbin"
 fi
 
 # MySql
