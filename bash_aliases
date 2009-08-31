@@ -23,10 +23,8 @@ else
   # For LS_COLORS template: $ dircolors /etc/DIR_COLORS
 fi
 
-alias l="ls"
-alias ll="ls -l"
-alias la="ls -a"
-alias lal="ls -alh"
+alias l="ls -alh"
+alias ll="ls -al"
 
 ############################################################
 ## Git
