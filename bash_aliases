@@ -145,6 +145,29 @@ function gemdoc {
   open $GEMS/../doc/`findgem $1`/rdoc/index.html
 }
 
+# Use: rt test_file
+# Use: rt test_file:test_name_regex
+# Finds a file under test/* and runs it with -n /test_name_regex/
+function rt {
+  FILE_HINT=`echo $1 | cut -f1 -d:`
+  TEST_REGEX=`echo $1 | cut -f2 -d:`
+  FILE_PATH=`find test/* -maxdepth 1 -name ${FILE_HINT}_test.rb`
+  if [ -z $FILE_PATH ];
+    then
+    echo Couldn\'t find file for $FILE_HINT
+    return
+  fi
+
+  if [[ $1 =~ ":" ]];
+    then
+    echo Running $FILE_PATH -n /$TEST_REGEX/
+    ruby -Itest $FILE_PATH -n /$TEST_REGEX/
+  else
+    echo Running $FILE_PATH
+    ruby -Itest $FILE_PATH
+  fi
+}
+
 ############################################################
 ## Rails
 ############################################################
