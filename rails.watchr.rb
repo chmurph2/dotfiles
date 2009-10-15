@@ -12,6 +12,7 @@
 def run(cmd)
   puts(cmd)
   system(cmd)
+  puts "*** #{Time.now} ***\n\n"
 end
 
 def run_all_tests
@@ -26,13 +27,17 @@ end
 # --------------------------------------------------
 # Watchr Rules
 # --------------------------------------------------
-watch( '^test.*/.*_test\.rb')       { |m| run("#{ruby_cmd} %s" % m[0]) }                                                            # watch all tests
-watch( '^lib/(.*)\.rb')             { |m| run("#{ruby_cmd} test/unit/%s_test.rb" % m[1]) }                                          # watch all libs
-watch( '^agents/(.*_agent)\.rb')    { |m| run("#{ruby_cmd} agents/%s/test/unit/%s_test.rb".gsub(/%s/, name=m[1].split('/').last)) } # watch all agents
-watch( '^app/models/(.*)\.rb')      { |m| run("#{ruby_cmd} test/unit/%s_test.rb" % m[1]) }                                          # watch all models
-watch( '^app/controllers/(.*)\.rb') { |m| run("#{ruby_cmd} test/functional/%s_test.rb" % m[1]) }                                    # watch all controllers
-watch( '^app/helpers/(.*)\.rb')     { |m| run("#{ruby_cmd} test/unit/%s_test.rb" % m[1]) }                                          # watch all helpers
-watch( '^test/test_helper\.rb' )    { run_all_tests }                                                                               # watch test_helper
+watch( '.*_test\.rb')       { |m| run("#{ruby_cmd} %s" % m[0]) }                                 # watch all tests
+watch( '^lib/(.*)\.rb')             { |m| run("#{ruby_cmd} test/unit/%s_test.rb" % m[1]) }       # watch all libs
+watch( '^app/models/(.*)\.rb')      { |m| run("#{ruby_cmd} test/unit/%s_test.rb" % m[1]) }       # watch all models
+watch( '^app/controllers/(.*)\.rb') { |m| run("#{ruby_cmd} test/functional/%s_test.rb" % m[1]) } # watch all controllers
+watch( '^app/helpers/(.*)\.rb')     { |m| run("#{ruby_cmd} test/unit/%s_test.rb" % m[1]) }       # watch all helpers
+watch( '^test/test_helper\.rb' )    { run_all_tests }                                            # watch test_helper
+watch( '^agents/(.*_agent)\.rb')    do |m|                                                       # watch all agents
+  name = m[1].split('/').last
+  name_sans_agent = name.gsub(/_agent/, '')
+  run("#{ruby_cmd} agents/%s/test/unit/%s_test.rb" % [name_sans_agent, name])
+end
 puts "Every move you make... ♪"
 
 # --------------------------------------------------
