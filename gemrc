@@ -5,6 +5,6 @@
 :bulk_threshold: 1000
 :verbose: true
 :sources: 
+- http://gemcutter.org
 - http://gems.rubyforge.org
 - http://gems.github.com
-- http://gemcutter.org
