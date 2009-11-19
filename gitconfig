@@ -19,3 +19,5 @@
 	summary = true
 [push]
 	default = matching
+[core]
+	excludesfile = /Users/cmurphy/.gitignore
