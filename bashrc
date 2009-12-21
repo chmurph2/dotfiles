@@ -35,6 +35,11 @@ if [ -d /usr/local/mysql/bin ] ; then
   PATH="/usr/local/mysql/bin:${PATH}"
 fi
 
+# MongoDB
+if [ -d /usr/local/mongodb/bin ] ; then
+  PATH="/usr/local/mongodb/bin:${PATH}"
+fi
+
 # Ant
 if [ -d /opt/ant ] ; then
   PATH="/opt/ant/bin:${PATH}"
