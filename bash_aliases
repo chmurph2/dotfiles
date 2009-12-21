@@ -87,16 +87,6 @@ alias gsp="git svn dcommit"
 alias gsg="git svn log"
 alias gsi="git svn info"
 
-############################################################
-## Ditz
-############################################################
-
-alias d='ditz todo'
-alias da='ditz add'
-alias ds='ditz show '
-alias dst='ditz status '
-alias dc='ditz close '
-alias de='ditz edit '
 
 ############################################################
 ## Subversion
