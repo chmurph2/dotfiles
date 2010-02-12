@@ -16,7 +16,7 @@ def run(cmd)
 end
 
 def run_all_tests
-  cmd = "rake"
+  cmd = "rake test"
   run(cmd)
 end
 
@@ -30,7 +30,7 @@ end
 watch( '.*_test\.rb')            { |m| run("#{ruby_cmd} %s" % m[0]) } # watch all tests
 watch( '^([Aa]pp|main)\.rb')     { |m| run_all_tests }                # watch main application
 watch( '^test/test_helper\.rb' ) { run_all_tests }                    # watch test_helper
-puts "\"I'm gonna live till I die...\""
+puts "\"I'm gonna live 'til I die...\""
 
 # --------------------------------------------------
 # Signal Handling
