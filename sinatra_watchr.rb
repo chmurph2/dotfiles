@@ -27,9 +27,10 @@ end
 # --------------------------------------------------
 # Watchr Rules
 # --------------------------------------------------
-watch( '.*_test\.rb')            { |m| run("#{ruby_cmd} %s" % m[0]) } # watch all tests
-watch( '^([Aa]pp|main)\.rb')     { |m| run_all_tests }                # watch main application
-watch( '^test/test_helper\.rb' ) { run_all_tests }                    # watch test_helper
+watch( '.*_test\.rb')            { |m| run("#{ruby_cmd} %s" % m[0]) }              # watch all tests
+watch( '^lib/(.*)\.rb')          { |m| run("#{ruby_cmd} test/%s_test.rb" % m[1]) } # watch all libs
+watch( '^([Aa]pp|main)\.rb')     { |m| run_all_tests }                             # watch main application
+watch( '^test/test_helper\.rb' ) { run_all_tests }                                 # watch test_helper
 puts "\"I'm gonna live 'til I die...\""
 
 # --------------------------------------------------
