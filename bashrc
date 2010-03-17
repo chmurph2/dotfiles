@@ -143,35 +143,6 @@ shopt -s checkwinsize
 export PAGER="less"
 export EDITOR="vi"
 
-
-
-############################################################
-## History
-############################################################
-
-# when you exit a shell, the history from that session is appended to ~/.bash_history.
-# Without this, you might very well lose the history of entire sessions (weird that this is not enabled by default).
-shopt -s histappend
-
-export HISTIGNORE="&:pwd:ls:ll:lal:[bf]g:exit:rm*:sudo rm*"
-# remove duplicates from the history (when a new item is added)
-export HISTCONTROL=erasedups
-# increase the default size from only 1,000 items
-export HISTSIZE=10000
-# Add timestamp to history
-# export HISTTIMEFORMAT="%F %T"
-
-# By default up/down are bound to previous-history
-# and next-history respectively. The following does the
-# same but gives the extra functionality where if you
-# type any text (or more accurately, if there is any text
-# between the start of the line and the cursor),
-# the subset of the history starting with that text
-# is searched.
-bind '"\e[A"':history-search-backward
-bind '"\e[B"':history-search-forward
-
-
 ############################################################
 ## History
 ############################################################
