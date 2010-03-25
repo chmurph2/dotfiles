@@ -47,12 +47,12 @@ fi
 
 # PostgreSQL
 if [ -d /opt/local/lib/postgresql83/bin/ ] ; then
-  PATH="${PATH}:/opt/local/lib/postgresql83/bin/"
+  PATH="${PATH}:/opt/local/lib/postgresql83/bin"
 fi
 
 # Ruby Enterprise
 if [ -d /usr/local/ruby-enterprise/bin ] ; then
-  PATH="${PATH}:/usr/local/ruby-enterprise/bin/"
+  PATH="${PATH}:/usr/local/ruby-enterprise/bin"
 fi
 
 # Subversion
