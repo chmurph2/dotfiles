@@ -163,8 +163,11 @@ export HISTSIZE=10000
 # where if you type any text (or more accurately, if there is any text between
 # the start of the line and the cursor), the subset of the history starting with
 # that text is searched.
-bind '"\e[A"':history-search-backward
-bind '"\e[B"':history-search-forward
+
+case "$-" in *i*) # use bind command in interactive shell only
+  bind '"\e[A"':history-search-backward
+  bind '"\e[B"':history-search-forward
+esac
 
 ############################################################
 ## Aliases
