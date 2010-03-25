@@ -115,24 +115,24 @@ alias cdjava="cd /system/Library/Frameworks/JavaVM.framework/Versions/1.5/Home"
 ############################################################
 
 alias r="rake"
-alias a="autotest -q -f"
+alias a="rake db:test:clone && autotest -q"
 alias smp="staticmatic preview ."
 
 export GEMS=`gem env gemdir`/gems
-function findgem {
+function gemfind {
   echo `ls $GEMS | grep -i $1 | sort | tail -1`
 }
 
-# Use: cdgem <name>, cd's into your gems directory
+# Use: gemcd <name>, cd's into your gems directory
 # that best matches the name provided.
-function cdgem {
-  cd $GEMS/`findgem $1`
+function gemcd {
+  cd $GEMS/`gemfind $1`
 }
 
 # Use: gemdoc <gem name>, opens the rdoc of the gem
 # that best matches the name provided.
 function gemdoc {
-  open $GEMS/../doc/`findgem $1`/rdoc/index.html
+  open $GEMS/../doc/`gemfind $1`/rdoc/index.html
 }
 
 # Use: rt test_file
