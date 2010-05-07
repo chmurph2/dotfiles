@@ -19,5 +19,7 @@
 	summary = true
 [push]
 	default = matching
+[remote "origin"]
+	push = HEAD
 [core]
 	excludesfile = /Users/cmurphy/.gitignore
