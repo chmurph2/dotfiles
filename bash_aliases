@@ -162,7 +162,7 @@ function rt {
 ## Rails
 ############################################################
 
-alias rails="rails -m ~/.rails.d/template.rb"
+# alias rails="rails -m ~/.rails.d/template.rb"
 alias ss="script/server"
 alias sg="script/generate"
 alias sc="script/console"
@@ -190,7 +190,6 @@ alias b64="openssl enc -base64"
 alias flushdns='dscacheutil -flushcache'
 alias qs-bounce="osascript ~/Library/Scripts/qs-bounce.scpt"
 alias rm="rm -iv"
-alias ps="sudo ps -eac"
 alias zip="myzip -r"
 # quicklook something from Terminal.app
 alias ql='qlmanage -p "$@" >& /dev/null'
