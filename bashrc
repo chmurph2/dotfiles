@@ -129,7 +129,7 @@ function parse_git_branch {
 # Do not set PS1 for dumb terminals
 if [ "$TERM" != 'dumb'  ] && [ -n "$BASH" ]
 then
-  export PS1='\[\033[32m\]\n[\s: \w] $(parse_git_branch)\n\[\033[31m\][\u@\h]\$ \[\033[00m\]'
+  export PS1='\[\033[32m\]\n[\s: \w] $(parse_git_branch)\n\[\033[36m\][\u@\h]\$ \[\033[00m\]'
 fi
 
 ############################################################
