@@ -2,3 +2,4 @@ bash_local
 bash_history
 *.swp
 .DS_Store
+*.tmproj
