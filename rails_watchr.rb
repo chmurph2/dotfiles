@@ -53,10 +53,10 @@ end
 # --------------------------------------------------
 # Watchr Rules
 # --------------------------------------------------
-watch('test/test_helper\.rb')    { run_all_tests }                                             # watch test_helper
-watch('test/.*/.*_test\.rb')     { |m| run_test_file(m[0]) }                                     # watch all tests
-watch('(app/lib)/.*/.*\.rb')     { |m| related_test_files(m[0]).map {|tf| run_test_file(tf) } }  # watch app and lib folders
-# watch( '^agents/(.*_agent)\.rb') do |m|                                                        # watch all agents
+watch('test/test_helper\.rb') { run_all_tests }                                              # watch test_helper
+watch('test/.*/.*_test\.rb')  { |m| run_test_file(m[0]) }                                    # watch all tests
+watch('(app|lib)/.*/.*\.rb')  { |m| related_test_files(m[0]).map {|tf| run_test_file(tf) } } # watch app and lib folders
+# watch( '^agents/(.*_agent)\.rb') do |m|                                                      # watch all agents
 #   name = m[1].split('/').last
 #   name_sans_agent = name.gsub(/_agent/, '')
 #   run("#{ruby_cmd} agents/%s/test/unit/%s_test.rb" % [name_sans_agent, name])
