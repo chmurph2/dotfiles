@@ -193,4 +193,8 @@ alias rm="rm -iv"
 alias zip="myzip -r"
 # quicklook something from Terminal.app
 alias ql='qlmanage -p "$@" >& /dev/null'
+# Open a man page in TextMate
+tman () {
+  MANWIDTH=160 MANPAGER='col -bx' man $@ | mate
+}
 ############################################################
