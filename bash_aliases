@@ -168,11 +168,6 @@ alias sg="script/generate"
 alias sc="script/console"
 alias tl='tail -f log/development.log'
 
-############################################################
-## Jekyll (blogging)
-############################################################
-
-alias j="jekyll"
 
 ############################################################
 ## Miscellaneous
