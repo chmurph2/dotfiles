@@ -3,3 +3,4 @@
 .DS\_Store
 *.sw?
 mkmf.log
+*.tmproj
