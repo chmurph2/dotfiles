@@ -35,7 +35,7 @@ end
 def run_test_file(file)
   system('clear')
   result = run(%Q(ruby -I"lib:test" -rubygems #{file}))
-  growl result.split("\n").last rescue nil
+  growl result.match(/^\d+ tests.*skips$/m).to_s
   puts result
 end
 
