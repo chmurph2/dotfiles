@@ -115,8 +115,7 @@ alias cdjava="cd /system/Library/Frameworks/JavaVM.framework/Versions/1.5/Home"
 ############################################################
 
 alias r="rake"
-alias a="rake db:test:clone && autotest -q"
-alias smp="staticmatic preview ."
+alias rv="rvm list"
 
 export GEMS=`gem env gemdir`/gems
 function gemfind {
