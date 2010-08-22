@@ -163,9 +163,9 @@ function rt {
 ############################################################
 
 # alias rails="rails -m ~/.rails.d/template.rb"
-alias ss="script/server"
-alias sg="script/generate"
-alias sc="script/console"
+alias ss="./script/server"
+alias sg="./script/generate"
+alias sc="./script/console"
 alias tl='tail -f log/development.log'
 
 
