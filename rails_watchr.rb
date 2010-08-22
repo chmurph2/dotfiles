@@ -35,7 +35,7 @@ end
 def run_test_file(file)
   system('clear')
   result = run(%Q(ruby -I"lib:test" -rubygems #{file}))
-  growl result.match(/^\d+ tests.*$/m).to_s
+  growl result.match(/^\d+ tests.*$/).to_s
   puts result
 end
 
