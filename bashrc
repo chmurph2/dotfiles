@@ -22,43 +22,10 @@ if [ -d ~/bin/private ] ; then
   PATH="~/bin/private:${PATH}"
 fi
 
-# MacPorts
-if [ -d /opt/local/bin ] ; then
-  PATH="${PATH}:/opt/local/bin"
-fi
-if [ -d /opt/local/sbin ] ; then
-  PATH="${PATH}:/opt/local/sbin"
-fi
-
 # MySql
 if [ -d /usr/local/mysql/bin ] ; then
   PATH="/usr/local/mysql/bin:${PATH}"
 fi
-
-# MongoDB
-if [ -d /usr/local/mongodb/bin ] ; then
-  PATH="/usr/local/mongodb/bin:${PATH}"
-fi
-
-# Ant
-if [ -d /opt/ant ] ; then
-  PATH="/opt/ant/bin:${PATH}"
-fi
-
-# PostgreSQL
-if [ -d /opt/local/lib/postgresql83/bin/ ] ; then
-  PATH="${PATH}:/opt/local/lib/postgresql83/bin"
-fi
-
-# Ruby Enterprise
-if [ -d /usr/local/ruby-enterprise/bin ] ; then
-  PATH="${PATH}:/usr/local/ruby-enterprise/bin"
-fi
-
-# Subversion
-# if [ -d /opt/subversion/bin ] ; then
-#   PATH="/opt/subversion/bin:${PATH}"
-# fi
 
 PATH=.:${PATH}
 
@@ -69,39 +36,6 @@ PATH=.:${PATH}
 if [ -d /usr/local/man ] ; then
   MANPATH="/usr/local/man:${MANPATH}"
 fi
-
-# MacPorts
-if [ -d /opt/local/share/man ] ; then
-  MANPATH="/opt/local/share/man:${MANPATH}"
-fi
-
-# Set MANPATH so it includes users' private man if it exists
-# if [ -d ~/man ]; then
-#   MANPATH="~/man:${MANPATH}"
-# fi
-
-############################################################
-## Other paths
-############################################################
-
-# if [ -d ~/work ] ; then
-#   CDPATH=".:~/work:${CDPATH}"
-# fi
-
-# Set INFOPATH so it includes users' private info if it exists
-# if [ -d ~/info ]; then
-#   INFOPATH="~/info:${INFOPATH}"
-# fi
-
-# DYLD_LIBRARY_PATH
-# if [[ `uname` == 'Darwin' ]]; then
-#   if [ -d /opt/local/lib ] ; then
-#     DYLD_LIBRARY_PATH="/opt/local/lib:${DYLD_LIBRARY_PATH}"
-#   fi
-#   if [ -d /opt/subversion/lib ] ; then
-#     DYLD_LIBRARY_PATH="/opt/subversion/lib:${DYLD_LIBRARY_PATH}"
-#   fi
-# fi
 
 ############################################################
 ## RVM
@@ -135,7 +69,7 @@ function parse_git_branch {
 # Do not set PS1 for dumb terminals
 if [ "$TERM" != 'dumb'  ] && [ -n "$BASH" ]
 then
-  export PS1='\[\033[32m\]\n[\s: \w] $(parse_git_branch)\n\[\033[36m\][\u@\h]\$ \[\033[00m\]'
+  export PS1='\[\033[32m\]\n[\s: \w] $(parse_git_branch)\n\[\033[36m\][\u@\h]∴ \[\033[00m\]'
 fi
 
 ############################################################
@@ -187,8 +121,8 @@ fi
 ## Bash Completion, if available
 ############################################################
 
-if [ -f /opt/local/etc/bash_completion ]; then
-  . /opt/local/etc/bash_completion
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+  . `brew --prefix`/etc/bash_completion
 elif  [ -f /etc/bash_completion ]; then
   . /etc/bash_completion
 elif  [ -f /etc/profile.d/bash_completion ]; then
@@ -234,6 +168,6 @@ if [[ "$USER" == '' ]]; then
 fi
 
 # MacPorts OpenSSL doesn't have a ca bundle, so piggy back on Curl's
-if [ -f /opt/local/share/curl/curl-ca-bundle.crt ] ; then
-  export SSL_CERT_FILE="/opt/local/share/curl/curl-ca-bundle.crt"
-fi
+# if [ -f /opt/local/share/curl/curl-ca-bundle.crt ] ; then
+#   export SSL_CERT_FILE="/opt/local/share/curl/curl-ca-bundle.crt"
+# fi
