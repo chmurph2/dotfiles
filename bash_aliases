@@ -117,21 +117,25 @@ alias cdjava="cd /system/Library/Frameworks/JavaVM.framework/Versions/1.5/Home"
 alias r="rake"
 alias rv="rvm list"
 
-export GEMS=`gem env gemdir`/gems
+function gemdir {
+  echo `rvm gemdir`
+}
+
 function gemfind {
-  echo `ls $GEMS | grep -i $1 | sort | tail -1`
+  local gems=`gemdir`/gems
+  echo `ls $gems | grep -i $1 | sort | tail -1`
 }
 
 # Use: gemcd <name>, cd's into your gems directory
 # that best matches the name provided.
 function gemcd {
-  cd $GEMS/`gemfind $1`
+  cd `gemdir`/gems/`gemfind $1`
 }
 
 # Use: gemdoc <gem name>, opens the rdoc of the gem
 # that best matches the name provided.
 function gemdoc {
-  open $GEMS/../doc/`gemfind $1`/rdoc/index.html
+  open `gemdir`/doc/`gemfind $1`/rdoc/index.html
 }
 
 # Use: rt test_file
