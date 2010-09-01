@@ -21,5 +21,7 @@
 	default = matching
 [remote "origin"]
 	push = HEAD
+[github]
+  user = chmurph2
 [core]
 	excludesfile = /Users/cmurphy/.gitignore
