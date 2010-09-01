@@ -45,6 +45,7 @@ alias ggs="gg --stat"
 alias gh="github"
 alias gsl="git shortlog -sn"
 alias gw="git whatchanged"
+alias gi="git config branch.master.remote 'origin'; git config branch.master.merge 'refs/heads/master'"
 
 # Useful report of what has been committed locally but not yet pushed to another
 # branch.  Defaults to the remote origin/master.  The u is supposed to stand for
