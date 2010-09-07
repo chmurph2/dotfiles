@@ -108,8 +108,8 @@ alias dstore-clean='find . -type f -name .DS_Store -print0 | xargs -0 rm'
 # Track who is listening to your iTunes music
 alias whotunes='lsof -r 2 -n -P -F n -c iTunes -a -i TCP@`hostname`:3689'
 
-# Java 1.5 home
-alias cdjava="cd /system/Library/Frameworks/JavaVM.framework/Versions/1.5/Home"
+# Java home
+alias cdjava="cd /system/Library/Frameworks/JavaVM.framework/Versions/1.6/Home"
 
 ############################################################
 ## Ruby
