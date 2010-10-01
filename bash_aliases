@@ -187,11 +187,8 @@ alias sha1="openssl dgst -sha1"
 alias sha2="openssl dgst -sha256"
 alias b64="openssl enc -base64"
 alias flushdns='dscacheutil -flushcache'
-alias qs-bounce="osascript ~/Library/Scripts/qs-bounce.scpt"
 alias rm="rm -iv"
-alias zip="myzip -r"
-# quicklook something from Terminal.app
-alias ql='qlmanage -p "$@" >& /dev/null'
+
 # Open a man page in TextMate
 tman () {
   MANWIDTH=160 MANPAGER='col -bx' man $@ | mate
