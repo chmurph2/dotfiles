@@ -193,4 +193,11 @@ alias rm="rm -iv"
 tman () {
   MANWIDTH=160 MANPAGER='col -bx' man $@ | mate
 }
+
+# instant web server in current directory
+function serve {
+  local port=$1
+  : ${port:=3000}
+  ruby -rwebrick -e"s = WEBrick::HTTPServer.new(:Port => $port, :DocumentRoot => Dir.pwd); trap(%q(INT)) { s.shutdown }; s.start"
+}
 ############################################################
