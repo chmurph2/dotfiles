@@ -24,7 +24,8 @@ else
 fi
 
 alias l="ls -alh"
-alias ll="ls -al"
+# long listing, hidden files, reverse sort by timestamp, human readable size
+alias lt="ls -larth"
 
 ############################################################
 ## Git
