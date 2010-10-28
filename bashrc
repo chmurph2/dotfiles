@@ -141,9 +141,7 @@ fi
 ## Bash Completion, if available
 ############################################################
 
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-  . `brew --prefix`/etc/bash_completion
-elif [ -f /usr/local/etc/bash_completion ]; then
+if [ -f /usr/local/etc/bash_completion ]; then
   . /usr/local/etc/bash_completion
 elif  [ -f /etc/bash_completion ]; then
   . /etc/bash_completion
