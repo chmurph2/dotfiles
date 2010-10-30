@@ -118,6 +118,9 @@ alias cdjava="cd /system/Library/Frameworks/JavaVM.framework/Versions/1.6/Home"
 
 alias r="rake"
 alias rv="rvm list"
+alias c="cap"
+alias csd="cap staging deploy"
+alias cpd="cap production deploy"
 
 function gemdir {
   echo `rvm gemdir`
