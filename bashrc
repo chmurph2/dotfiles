@@ -10,22 +10,20 @@ fi
 ## PATH
 ############################################################
 
-if [ -d /usr/local/bin ] ; then
-  PATH="/usr/local/bin:${PATH}"
-fi
+function conditionally_prefix_path {
+  local dir=$1
+  if [ -d $dir ]; then
+    PATH="$dir:${PATH}"
+  fi
+}
 
-if [ -d ~/bin ] ; then
-  PATH="~/bin:${PATH}"
-fi
-
-if [ -d ~/bin/private ] ; then
-  PATH="~/bin/private:${PATH}"
-fi
-
-# MySql
-if [ -d /usr/local/mysql/bin ] ; then
-  PATH="/usr/local/mysql/bin:${PATH}"
-fi
+conditionally_prefix_path /usr/local/bin
+conditionally_prefix_path /usr/local/sbin
+conditionally_prefix_path /usr/local/share/npm/bin
+conditionally_prefix_path /usr/local/mysql/bin
+conditionally_prefix_path /usr/texbin
+conditionally_prefix_path ~/bin
+conditionally_prefix_path ~/bin/private
 
 PATH=.:${PATH}
 
@@ -33,9 +31,15 @@ PATH=.:${PATH}
 ## MANPATH
 ############################################################
 
-if [ -d /usr/local/man ] ; then
-  MANPATH="/usr/local/man:${MANPATH}"
-fi
+function conditionally_prefix_manpath {
+  local dir=$1
+  if [ -d $dir ]; then
+    MANPATH="$dir:${MANPATH}"
+  fi
+}
+
+conditionally_prefix_manpath /usr/local/man
+conditionally_prefix_manpath ~/man
 
 ############################################################
 ## RVM
