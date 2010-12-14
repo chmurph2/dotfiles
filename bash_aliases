@@ -170,6 +170,7 @@ alias b="bundle"
 alias bi="b install"
 alias bu="b update"
 alias be="b exec"
+alias bo="b open"
 alias biv="bi --path vendor"
 alias binit="biv && b package && echo 'vendor/ruby' >> .gitignore"
 
