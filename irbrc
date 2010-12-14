@@ -8,10 +8,7 @@ end
 
 require 'rubygems'
 begin
-  # require 'utility_belt'
+  require 'active_support/core_ext'
   require 'flyrb'
-rescue LoadError
-  # warn "Missing utility_belt gem"
-  warn "Missing flyrb gem (gem install flyrb --pre)"
-end
+rescue LoadError; end
 
