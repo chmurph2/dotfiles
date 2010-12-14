@@ -199,6 +199,8 @@ alias sha2="openssl dgst -sha256"
 alias b64="openssl enc -base64"
 alias flushdns='dscacheutil -flushcache'
 alias rm="rm -iv"
+alias mongod="sudo mongod --config /usr/local/Cellar/mongodb/1.6.3-x86_64/mongod.conf"
+alias mongodr="mongod --repair"
 
 # Open a man page in TextMate
 tman () {
