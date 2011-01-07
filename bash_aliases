@@ -185,7 +185,7 @@ alias binit="biv && b package && echo 'vendor/ruby' >> .gitignore"
 alias ss="./script/server"
 alias sg="./script/generate"
 alias sc="./script/console"
-alias tl='tail -f log/development.log'
+alias tl="tail -f log/development.log"
 
 
 ############################################################
