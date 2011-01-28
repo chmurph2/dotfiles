@@ -187,7 +187,6 @@ alias sg="./script/generate"
 alias sc="./script/console"
 alias tl="tail -f log/development.log"
 
-
 ############################################################
 ## Miscellaneous
 ############################################################
@@ -203,6 +202,7 @@ alias sha2="openssl dgst -sha256"
 alias b64="openssl enc -base64"
 alias flushdns='dscacheutil -flushcache'
 alias rm="rm -iv"
+alias psg='ps aux|grep '
 
 # Open a man page in TextMate
 tman () {
