@@ -115,6 +115,11 @@ alias whotunes='lsof -r 2 -n -P -F n -c iTunes -a -i TCP@`hostname`:3689'
 # Java home
 alias cdjava="cd /system/Library/Frameworks/JavaVM.framework/Versions/1.6/Home"
 
+# Open a man page in TextMate
+tman () {
+  MANWIDTH=160 MANPAGER='col -bx' man $@ | mate
+}
+
 ############################################################
 ## Ruby
 ############################################################
@@ -203,11 +208,6 @@ alias b64="openssl enc -base64"
 alias flushdns='dscacheutil -flushcache'
 alias rm="rm -iv"
 alias psg='ps aux|grep '
-
-# Open a man page in TextMate
-tman () {
-  MANWIDTH=160 MANPAGER='col -bx' man $@ | mate
-}
 
 # instant web server in current directory
 function serve {
