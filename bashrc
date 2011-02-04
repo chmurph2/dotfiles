@@ -70,7 +70,7 @@ function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\(\1$(parse_git_dirty)\)/"
 }
 
-if [ `which git` ]; then
+if [ `which git 2> /dev/null` ]; then
   function git_prompt {
     parse_git_branch
   }
@@ -80,7 +80,7 @@ else
   }
 fi
 
-if [ `which rvm-prompt` ]; then
+if [ `which rvm-prompt 2> /dev/null` ]; then
   function rvm_prompt {
     echo "($(rvm-prompt v p g s))"
   }

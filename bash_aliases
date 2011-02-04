@@ -47,7 +47,7 @@ alias gh="github"
 alias gsl="git shortlog -sn"
 alias gw="git whatchanged"
 alias gi="git config branch.master.remote 'origin'; git config branch.master.merge 'refs/heads/master'"
-if [ `which hub` ]; then
+if [ `which hub 2> /dev/null` ]; then
   alias git="hub"
 fi
 
