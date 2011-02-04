@@ -206,6 +206,7 @@ alias sha1="openssl dgst -sha1"
 alias sha2="openssl dgst -sha256"
 alias b64="openssl enc -base64"
 alias flushdns='dscacheutil -flushcache'
+alias whichliniux='uname -a; cat /etc/*release; cat /etc/issue'
 alias rm="rm -iv"
 alias psg='ps aux|grep '
 
