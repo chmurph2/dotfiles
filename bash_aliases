@@ -175,16 +175,24 @@ function rt {
   fi
 }
 
+
 ############################################################
 ## Bundler
 ############################################################
+function ignore_vendor_ruby {
+  grep -q 'vendor/ruby' .gitignore > /dev/null
+  if [[ $? -ne 0 ]]; then
+    echo -e "\nvendor/ruby" >> .gitignore
+  fi
+}
+
 alias b="bundle"
 alias bi="b install"
 alias bu="b update"
 alias be="b exec"
 alias bo="b open"
 alias biv="bi --path vendor"
-alias binit="biv && b package && echo 'vendor/ruby' >> .gitignore"
+alias binit="bi && bundle package && ignore_vendor_ruby"
 
 ############################################################
 ## Rails
