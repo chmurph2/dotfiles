@@ -127,7 +127,6 @@ tman () {
 
 alias r="rake"
 alias rv="rvm list"
-alias c="cap"
 alias csd="cap staging deploy"
 alias cpd="cap production deploy"
 
