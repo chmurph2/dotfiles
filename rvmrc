@@ -1,2 +1,3 @@
 # Switch to default/system when leaving a project/directory set
 rvm_project_rvmrc_default=1
+export rvm_path="/Users/cmurphy/.rvm"
