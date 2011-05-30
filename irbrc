@@ -20,7 +20,7 @@ class Object
   end
 end
 
-# Toys methods to play with.
+# Toy methods to play with.
 # Stolen from https://gist.github.com/807492
 class Array
   def self.toy(n=10,&block)
@@ -61,9 +61,15 @@ IRB.conf[:AT_EXIT].unshift Proc.new {
 # wirble configuration, using only colours
 Wirble.init(:skip_prompt => true, :skip_history => true, :init_colors => true)
 # get the default colors and add in your own
-colors = Wirble::Colorize.colors.merge({ :symbol        => :yellow,
-                                         :symbol_prefix => :yellow,
-                                         :refers        => :yellow,
-                                         :comma         => :yellow })
-# set the colors used by Wirble
-Wirble::Colorize.colors = colors
+Wirble::Colorize.colors.merge!({ :symbol        => :green,
+                                 :symbol_prefix => :green,
+                                 :keyword       => :light_gray,
+                                 :open_string   => :green,
+                                 :close_string  => :green,
+                                 :open_array    => :white,
+                                 :close_array   => :white,
+                                 :open_hash     => :white,
+                                 :close_hash    => :white,
+                                 :refers        => :white,
+                                 :comma         => :white,
+                                 :number        => :light_purple })
