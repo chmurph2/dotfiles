@@ -9,7 +9,7 @@ submodules within.
     $ git submodule update --init --recursive
 
 (Option 1) If you'd like to symlink everything within this repository to your
-home directory, run `install.rb`
+home directory, run `install.rb`.
 
     $ cd ~/.dotfiles
     $ ./install.rb
