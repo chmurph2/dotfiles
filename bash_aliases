@@ -191,6 +191,7 @@ alias bu="b update"
 alias be="b exec"
 alias bo="b open"
 alias biv="bi --path vendor"
+alias bil="bi --local"
 alias binit="bi && bundle package && ignore_vendor_ruby"
 
 ############################################################
