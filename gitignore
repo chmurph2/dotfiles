@@ -3,4 +3,5 @@
 .DS\_Store
 *.sw?
 mkmf.log
+sqlnet.log
 *.tmproj
