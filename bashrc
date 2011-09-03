@@ -106,6 +106,7 @@ shopt -s checkwinsize
 
 export PAGER="less"
 export EDITOR="vi"
+export LANG="en_US.UTF-8"
 
 ############################################################
 ## History
