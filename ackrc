@@ -17,6 +17,9 @@ coffeescript=coffee
 markdown=markdown,md,mdown
 
 --type-set
+erb=erb
+
+--type-set
 tmstuff=.tmproj,.tm_build_errors
 
 --type-set
