@@ -112,7 +112,6 @@ export LANG="en_US.UTF-8"
 ## History
 ############################################################
 
-# http://stackoverflow.com/questions/103944/real-time-history-export-amongst-bash-terminal-windows
 export HISTIGNORE="&:pwd:ls:ll:lal:[bf]g:exit:rm*:sudo rm*"
 export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
 export HISTSIZE=100000                   # big big history
