@@ -4,7 +4,6 @@ require 'rubygems'
 begin
   require 'active_support/core_ext'
   require 'sketches'
-  require 'wirble'
   require 'irb/completion'
   require 'irb/ext/save-history'
 rescue LoadError; end
@@ -57,19 +56,3 @@ IRB.conf[:AT_EXIT].unshift Proc.new {
     Readline::HISTORY.push e
   }
 }
-
-# wirble configuration, using only colours
-Wirble.init(:skip_prompt => true, :skip_history => true, :init_colors => true)
-# get the default colors and add in your own
-Wirble::Colorize.colors.merge!({ :symbol        => :green,
-                                 :symbol_prefix => :green,
-                                 :keyword       => :light_gray,
-                                 :open_string   => :green,
-                                 :close_string  => :green,
-                                 :open_array    => :white,
-                                 :close_array   => :white,
-                                 :open_hash     => :white,
-                                 :close_hash    => :white,
-                                 :refers        => :white,
-                                 :comma         => :white,
-                                 :number        => :light_purple })
