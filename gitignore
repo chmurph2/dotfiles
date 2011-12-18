@@ -4,6 +4,7 @@
 ## TEXTMATE
 *.tmproj
 tmtags
+.tm_properties
 
 ## EMACS
 *~
