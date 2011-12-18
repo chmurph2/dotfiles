@@ -3,3 +3,4 @@ bash_history
 *.swp
 .DS_Store
 *.tmproj
+gitconfig
