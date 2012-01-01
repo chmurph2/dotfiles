@@ -6,6 +6,9 @@
 tmtags
 .tm_properties
 
+## SUBLIME TEXT
+*.sublime-*
+
 ## EMACS
 *~
 \#*
@@ -21,3 +24,5 @@ pkg
 
 ## PROJECT::SPECIFIC
 .bundle
+vendor/ruby
+public/assets
