@@ -161,7 +161,7 @@ function gemdoc {
 function rt {
   FILE_HINT=`echo $1 | cut -f1 -d:`
   TEST_REGEX=`echo $1 | cut -f2 -d:`
-  FILE_PATH=`find test/* -maxdepth 1 -name ${FILE_HINT}_test.rb`
+  FILE_PATH=`find test/* -maxdepth 2 -name ${FILE_HINT}_test.rb`
   if [ -z $FILE_PATH ];
     then
     echo Couldn\'t find file for $FILE_HINT
