@@ -10,10 +10,3 @@ fi
 if [ -f ~/.rbenv/completions/rbenv.bash ]; then
   . ~/.rbenv/completions/rbenv.bash
 fi
-
-function _rinstall_versions() {
-  COMPREPLY=()
-  local cur="${COMP_WORDS[COMP_CWORD]}"
-  COMPREPLY=( $( compgen -W "$(ruby-build --definitions)" -- $cur ) )
-}
-complete -F _rinstall_versions rinstall
