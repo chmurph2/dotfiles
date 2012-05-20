@@ -1,12 +1,6 @@
-# http://onrails.org/articles/2006/11/17/rake-command-completion-using-rake
+# Install bash-completion via `brew install bash-completion` then symlink to
+# this file from "/usr/local/etc/bash_completion.d/".
+
 if [ -f ~/bin/rake_completion ]; then
-  complete -C ~/bin/rake_completion -o default rake
-fi
-
-if [ -f ~/bin/git_completion ]; then
-  . ~/bin/git_completion
-fi
-
-if [ -f ~/.rbenv/completions/rbenv.bash ]; then
-  . ~/.rbenv/completions/rbenv.bash
+  . ~/bin/rake_completion
 fi
