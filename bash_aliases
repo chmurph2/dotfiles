@@ -227,6 +227,11 @@ alias whichliniux='uname -a; cat /etc/*release; cat /etc/issue'
 alias rm="rm -iv"
 alias psg='ps aux|grep '
 
+# make a dir and enter it (or make a set of dirs and enter the last one)
+function mcd {
+  mkdir -p "${@}" && cd "${1}";
+}
+
 # instant web server in current directory
 function serve {
   local port=$1
