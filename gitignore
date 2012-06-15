@@ -27,6 +27,7 @@ pkg
 vendor/ruby
 public/assets
 bin
+.rake_t_cache
 
 ## ORACLE BS
 sqlnet.log
