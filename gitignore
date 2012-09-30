@@ -26,6 +26,7 @@ pkg
 .bundle
 vendor/ruby
 public/assets
+public/stylesheets
 bin
 .rake_t_cache
 
