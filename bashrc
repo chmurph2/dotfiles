@@ -168,3 +168,10 @@ fi
 # if [ -f /opt/local/share/curl/curl-ca-bundle.crt ] ; then
 #   export SSL_CERT_FILE="/opt/local/share/curl/curl-ca-bundle.crt"
 # fi
+
+############################################################
+## Ruby Performance Boost (see https://gist.github.com/1688857)
+############################################################
+
+export RUBY_GC_MALLOC_LIMIT=60000000
+export RUBY_FREE_MIN=200000
