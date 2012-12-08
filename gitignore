@@ -29,6 +29,8 @@ public/assets
 public/stylesheets
 bin
 .rake_t_cache
+.rbenv-gemsets
+.powenv
 
 ## ORACLE BS
 sqlnet.log
