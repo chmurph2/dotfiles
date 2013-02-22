@@ -3,7 +3,6 @@ IRB.conf[:PROMPT_MODE] = :SIMPLE
 require 'rubygems'
 begin
   require 'active_support/core_ext'
-  require 'sketches'
   require 'irb/completion'
   require 'irb/ext/save-history'
 rescue LoadError; end
