@@ -1,8 +1,17 @@
+# Bash
 bash_local
 bash_history
+
+# OS X
 *.swp
 .DS_Store
+
+# Editors
 *.tmproj
-gitconfig
 codeintel
+
+# Git
+gitconfig
+
+# Ruby
 gemrc
