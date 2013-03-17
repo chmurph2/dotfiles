@@ -49,7 +49,7 @@ alias gsl="git shortlog -sn"
 alias gw="git whatchanged"
 alias gi="git config branch.master.remote 'origin'; git config branch.master.merge 'refs/heads/master'"
 alias gst="git stash"
-alias gstu="git stash -u"
+alias gstu="git stash --include-untracked"
 alias gstp="git stash pop"
 
 if [ `which hub 2> /dev/null` ]; then
