@@ -53,6 +53,7 @@ alias gi="git config branch.master.remote 'origin'; git config branch.master.mer
 alias gst="git stash"
 alias gstu="git stash --include-untracked"
 alias gstp="git stash pop"
+alias grp="git remote prune"
 
 if [ `which hub 2> /dev/null` ]; then
   alias git="hub"
