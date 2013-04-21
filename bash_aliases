@@ -232,7 +232,8 @@ if [ -f /Applications/Emacs.app/Contents/MacOS/Emacs ]; then
   alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs'
 fi
 
-alias grep='GREP_COLOR="1;37;41" grep --color=auto'
+export GREP_COLOR="1;37;41"
+alias grep="grep --color=auto"
 alias wgeto="wget -q -O -"
 alias sha1="openssl dgst -sha1"
 alias sha2="openssl dgst -sha256"
