@@ -46,7 +46,10 @@ conditionally_prefix_manpath ~/man
 ## RVM
 ############################################################
 
-if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
+if [[ -s ~/.rvm/scripts/rvm ]] ; then
+  source ~/.rvm/scripts/rvm ;
+  conditionally_prefix_path ~/.rvm/bin
+fi
 
 ############################################################
 ## Terminal behavior
@@ -173,5 +176,5 @@ fi
 ## Ruby Performance Boost (see https://gist.github.com/1688857)
 ############################################################
 
-export RUBY_GC_MALLOC_LIMIT=60000000
-export RUBY_FREE_MIN=200000
+# export RUBY_GC_MALLOC_LIMIT=60000000
+# export RUBY_FREE_MIN=200000
