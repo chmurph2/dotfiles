@@ -112,6 +112,18 @@ alias svn-clean='find . -name .svn -print0 | xargs -0 rm -rf'
 alias svnlog="svn log --limit 100 | grep -B1 -A3 '| cmurphy |'"
 
 ############################################################
+## Vagrant
+############################################################
+
+alias v='vagrant'
+alias vs='v ssh'
+alias vd='v destroy'
+alias vh='v halt'
+alias vu='v up'
+alias vb='v box'
+alias vb='v box'
+
+############################################################
 ## OS X
 ############################################################
 
