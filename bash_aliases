@@ -117,10 +117,8 @@ alias svnlog="svn log --limit 100 | grep -B1 -A3 '| cmurphy |'"
 
 alias v='vagrant'
 alias vs='v ssh'
-alias vd='v destroy'
 alias vh='v halt'
 alias vu='v up'
-alias vb='v box'
 alias vb='v box'
 
 ############################################################
