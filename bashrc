@@ -26,7 +26,7 @@ conditionally_prefix_path /usr/texbin
 conditionally_prefix_path ~/bin
 conditionally_prefix_path ~/bin/private
 
-PATH=.:${PATH}
+PATH=.:./bin:${PATH}
 
 ############################################################
 ## MANPATH
@@ -43,12 +43,12 @@ conditionally_prefix_manpath /usr/local/man
 conditionally_prefix_manpath ~/man
 
 ############################################################
-## RVM
-############################################################
+## General development configurations
+###########################################################
 
-if [[ -s ~/.rvm/scripts/rvm ]] ; then
-  source ~/.rvm/scripts/rvm ;
-  conditionally_prefix_path ~/.rvm/bin
+# Enable shims and autocompletion:
+if [ `which rbenv 2> /dev/null` ]; then
+  eval "$(rbenv init -)"
 fi
 
 ############################################################
@@ -84,20 +84,35 @@ else
   }
 fi
 
-if [ `which rvm-prompt 2> /dev/null` ]; then
-  function rvm_prompt {
-    echo "($(rvm-prompt v p g s))"
+if [ `which rbenv 2> /dev/null` ]; then
+  function ruby_prompt {
+    echo $(rbenv version-name)
+  }
+elif [ `which ruby 2> /dev/null` ]; then
+  function ruby_prompt {
+    echo $(ruby --version | cut -d' ' -f2)
   }
 else
-  function rvm_prompt {
+  function ruby_prompt {
     echo ""
   }
 fi
 
-# Do not set PS1 for dumb terminals
-if [ "$TERM" != 'dumb'  ] && [ -n "$BASH" ]
-then
-  export PS1='\[\033[32m\]\n[\s: \w] $(git_prompt) $(rvm_prompt)\n\[\033[36m\][\u@\h \t]∴ \[\033[00m\]'
+if [ `which rbenv-gemset 2> /dev/null` ]; then
+  function gemset_prompt {
+    local gemset=$(rbenv gemset active 2> /dev/null)
+    if [ $gemset ]; then
+      echo " ${gemset}"
+    fi
+  }
+else
+  function gemset_prompt {
+    echo ""
+  }
+fi
+
+if [ -n "$BASH" ]; then
+  export PS1='\[\033[32m\]\n[\s: \w] ($(ruby_prompt)$(gemset_prompt)) $(git_prompt)\n\[\033[36m\][\u@\h \t]∴ \[\033[00m\]'
 fi
 
 ############################################################
