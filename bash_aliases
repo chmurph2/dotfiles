@@ -125,6 +125,9 @@ alias vb='v box'
 ## OS X
 ############################################################
 
+# Clear Apple’s System Logs to improve shell startup speed
+alias clearsyslogs="sudo rm -rfv /private/var/log/asl/*.asl"
+
 # Get rid of those pesky .DS_Store files recursively
 alias dstore-clean='find . -type f -name .DS_Store -print0 | xargs -0 rm'
 
