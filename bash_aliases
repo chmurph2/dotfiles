@@ -31,7 +31,6 @@ alias lt="ls -larth"
 ############################################################
 ## Git
 ############################################################
-
 alias g="git"
 alias gb="git branch -a -v"
 alias gc="git commit -v"
@@ -92,24 +91,6 @@ function st {
   fi
 }
 
-############################################################
-## Git SVN
-############################################################
-
-alias gslr="git svn rebase"
-alias gsp="git svn dcommit"
-alias gsg="git svn log"
-alias gsi="git svn info"
-
-
-############################################################
-## Subversion
-############################################################
-
-# Remove all .svn folders from directory recursively
-alias svn-clean='find . -name .svn -print0 | xargs -0 rm -rf'
-# Show my last 50 entries into the svn log
-alias svnlog="svn log --limit 100 | grep -B1 -A3 '| cmurphy |'"
 
 ############################################################
 ## Vagrant
