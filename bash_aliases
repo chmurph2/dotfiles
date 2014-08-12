@@ -200,11 +200,11 @@ alias binit="bi && bundle package && ignore_vendor_ruby"
 ## Rails
 ############################################################
 
-# alias rails="rails -m ~/.rails.d/template.rb"
 alias ss="./script/server"
 alias sg="./script/generate"
 alias sc="./script/console"
 alias tl="tail -f log/development.log"
+alias ttr="touch tmp/restart.txt"
 
 ############################################################
 ## Miscellaneous
