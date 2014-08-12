@@ -1,0 +1,33 @@
+[include]
+  path = ~/.gitconfig_local
+[alias]
+  co = checkout
+  st = status
+  br = branch
+  w = whatchanged
+[apply]
+  whitespace = nowarn
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+  ui = true
+  pager = true
+[merge]
+  summary = true
+[push]
+  default = upstream
+[pull]
+  rebase = true
+[remote "origin"]
+  push = HEAD
+[core]
+  excludesfile = ~/.gitignore
+[branch]
+  autosetuprebase = always
+[core]
+  excludesfile = ~/.gitignore
+# Avoid GIST password prompts: https://help.github.com/articles/set-up-git#password-caching
+[credential]
+	helper = osxkeychain

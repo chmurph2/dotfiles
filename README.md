@@ -22,3 +22,24 @@ home directory manually, you can.
     $ ln -ns autotest.d ~/.autotest.d
 
 
+**(Option 3)** Just look around and pick and choose what you like for your own
+  dotfiles.
+
+## Notes
+
+If you'd like to use git and github, be sure to add your own `~/.gitconfig_local` file:
+
+```
+[user]
+  email = email@example.com
+  name = Your Name
+[github]
+  user = your-github-username
+```
+
+## Requirements
+
+* *nix environment (e.g. Mac OS X or Linux)
+* Bash version >= 3 (for command line enhancements)
+* Emacs version >= 24 (for emacs config and setup)
+* Ruby (for the install.rb to work)

@@ -10,8 +10,5 @@ bash_history
 *.tmproj
 codeintel
 
-# Git
-gitconfig
-
 # Ruby
 gemrc
