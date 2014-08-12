@@ -26,8 +26,6 @@
   excludesfile = ~/.gitignore
 [branch]
   autosetuprebase = always
-[core]
-  excludesfile = ~/.gitignore
 # Avoid GIST password prompts: https://help.github.com/articles/set-up-git#password-caching
 [credential]
 	helper = osxkeychain
