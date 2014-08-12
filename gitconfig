@@ -28,4 +28,4 @@
   autosetuprebase = always
 # Avoid GIST password prompts: https://help.github.com/articles/set-up-git#password-caching
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
