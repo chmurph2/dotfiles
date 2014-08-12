@@ -18,7 +18,6 @@ tmtags
 *.swp
 
 ## PROJECT::GENERAL
-coverage
 rdoc
 pkg
 
@@ -27,10 +26,11 @@ pkg
 vendor/ruby
 public/assets
 public/stylesheets
-bin
 .rake_t_cache
 .rbenv-gemsets
 .powenv
+.foreman
+.env
 
 ## ORACLE BS
 sqlnet.log
