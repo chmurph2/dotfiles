@@ -3,7 +3,7 @@
 Clone (or fork) this repository, and update all the git submodules within.
 
     $ cd ~
-    $ git clone https://chmurph2@github.com/chmurph2/dotfiles.git .dotfiles
+    $ git clone git@github.com:chmurph2/dotfiles.git .dotfiles # or wherever you prefer
     $ cd .dotfiles
     $ git submodule update --init --recursive
 
