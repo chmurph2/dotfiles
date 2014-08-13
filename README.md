@@ -1,4 +1,4 @@
-# My Dotfiles
+# .dotfiles
 Dotfiles (e.g. .profile, .gemrc, etc.) are configuration files that personalize your system. These files normally live under your $HOME directory and are hidden, in that they are preceded by a dot (hence "dotfiles") and not shown by default in places like OS X's Finder.app.
 
 These are my dotfiles that are generic enough to share across the computers I use, and with other users.
