@@ -3,6 +3,12 @@ Dotfiles (e.g. .profile, .gemrc, etc.) are configuration files that personalize 
 
 These are my dotfiles that are generic enough to share across the computers I use, and with other users.
 
+## Requirements
+
+* *nix environment (e.g. Mac OS X or Linux)
+* Bash version >= 3 (for command line enhancements)
+* Ruby (for the install.rb to work)
+
 ## Getting Started
 
 Clone (or fork) this repository, and update all the git submodules within.
@@ -39,9 +45,3 @@ If you'd like to use git and github, be sure to add your own `~/.gitconfig_local
 [github]
   user = your-github-username
 ```
-
-## Requirements
-
-* *nix environment (e.g. Mac OS X or Linux)
-* Bash version >= 3 (for command line enhancements)
-* Ruby (for the install.rb to work)
