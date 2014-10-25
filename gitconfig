@@ -20,6 +20,8 @@
   default = upstream
 [pull]
   rebase = true
+[fetch]
+  prune = true
 [remote "origin"]
   push = HEAD
 [core]
