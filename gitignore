@@ -30,7 +30,6 @@ public/stylesheets
 .rbenv-gemsets
 .powenv
 .foreman
-.env
 
 ## ORACLE BS
 sqlnet.log
