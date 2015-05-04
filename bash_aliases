@@ -197,6 +197,29 @@ alias bil="bi --local"
 alias binit="bi && bundle package && ignore_vendor_ruby"
 
 ############################################################
+## Heroku
+############################################################
+# Kudos to @rmm5t for this approach
+function heroku_command {
+  if [ -z "$*" ]; then
+    echo "run console"
+  else
+    echo "$*"
+  fi
+}
+
+function hstaging {
+  heroku `heroku_command $*` --remote staging
+}
+
+function hproduction {
+  heroku `heroku_command $*` --remote production
+}
+
+alias deploy_hproduction='hproduction maintenance:on && git push production && hproduction run rake db:migrate && hproduction maintenance:off'
+alias deploy_hstaging='hstaging maintenance:on && git push staging && hstaging run rake db:migrate && hstaging maintenance:off'
+
+############################################################
 ## Rails
 ############################################################
 
