@@ -6,10 +6,6 @@ if [ -e /etc/bashrc ] ; then
   . /etc/bashrc
 fi
 
-if [ -e ~/.profile ] ; then
-  . ~/.profile
-fi
-
 ############################################################
 ## PATH
 ############################################################
@@ -31,6 +27,11 @@ conditionally_prefix_path ~/bin
 conditionally_prefix_path ~/bin/private
 
 PATH=.:./bin:${PATH}
+
+# Source .profile last (for things like Boxen)
+if [ -e ~/.profile ] ; then
+  . ~/.profile
+fi
 
 ############################################################
 ## MANPATH

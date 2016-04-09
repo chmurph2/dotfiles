@@ -29,7 +29,9 @@
 [branch]
   autosetuprebase = always
 # Avoid GIST password prompts: https://help.github.com/articles/set-up-git#password-caching
-[credential]
-  helper = /opt/boxen/bin/boxen-git-credential
+
 [hub]
   protocol = https
+
+[credential]
+helper = /opt/boxen/bin/boxen-git-credential
