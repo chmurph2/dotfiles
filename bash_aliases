@@ -127,10 +127,11 @@ tman () {
 ## Ruby
 ############################################################
 
-alias r="rake"
+alias r="bundle exec rake"
 alias rv="rvm list"
 alias csd="cap staging deploy"
 alias cpd="cap production deploy"
+alias guard="bundle exec guard"
 
 function gemdir {
   echo `rvm gemdir`
