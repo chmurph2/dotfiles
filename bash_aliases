@@ -128,31 +128,7 @@ tman () {
 ############################################################
 
 alias r="bundle exec rake"
-alias rv="rvm list"
-alias csd="cap staging deploy"
-alias cpd="cap production deploy"
 alias guard="bundle exec guard"
-
-function gemdir {
-  echo `rvm gemdir`
-}
-
-function gemfind {
-  local gems=`gemdir`/gems
-  echo `ls $gems | grep -i $1 | sort | tail -1`
-}
-
-# Use: gemcd <name>, cd's into your gems directory
-# that best matches the name provided.
-function gemcd {
-  cd `gemdir`/gems/`gemfind $1`
-}
-
-# Use: gemdoc <gem name>, opens the rdoc of the gem
-# that best matches the name provided.
-function gemdoc {
-  open `gemdir`/doc/`gemfind $1`/rdoc/index.html
-}
 
 # Use: rt test_file
 # Use: rt test_file:test_name_regex
