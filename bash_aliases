@@ -123,6 +123,11 @@ tman () {
   MANWIDTH=160 MANPAGER='col -bx' man $@ | mate
 }
 
+# DNS issues got you down?
+function fuckit {
+  sudo networksetup -setdnsservers Wi-Fi empty
+}
+
 ############################################################
 ## Ruby
 ############################################################
