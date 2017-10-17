@@ -19,3 +19,5 @@ chdir DOTFILES_ROOT do
     `ln -ns #{File.expand_path file} #{target}`
   end
 end
+
+system("ln -ns #{File.join(HOME, '.Brewfile')} Brewfile")
