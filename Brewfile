@@ -42,14 +42,14 @@ cask "vlc"
 cask "wifi-explorer"
 
 # App Store
+mas "Drop Shadow", id: 484550417
 mas "Monosnap", id: 540348655
 mas "Things 3", id: 904280696
 mas "Tweetbot for Twitter", id: 557168941
 
 # manually reinstall:
-# Drop Shadow.app
+# Froq.app
 # Flux.app
-# Froq 2.app
 # MyHarmony.app
 # ScanSnap.app
 # TextExpander 4
