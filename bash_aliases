@@ -152,10 +152,10 @@ function rt {
   if [[ $1 =~ ":" ]];
     then
     echo Running $FILE_PATH -n /$TEST_REGEX/
-    ruby -Itest $FILE_PATH -n /$TEST_REGEX/
+    bundle exec ruby -Itest $FILE_PATH -n /$TEST_REGEX/
   else
     echo Running $FILE_PATH
-    ruby -Itest $FILE_PATH
+    bundle exec ruby -Itest $FILE_PATH
   fi
 }
 
