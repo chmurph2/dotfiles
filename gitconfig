@@ -1,3 +1,11 @@
+# ~/.gitconfig_local template
+#
+# [user]
+#   email =
+#   name =
+# [github]
+#   user =
+
 [include]
   path = ~/.gitconfig_local
 [alias]
@@ -28,10 +36,5 @@
   excludesfile = ~/.gitignore
 [branch]
   autosetuprebase = always
-# Avoid GIST password prompts: https://help.github.com/articles/set-up-git#password-caching
-
 [hub]
   protocol = https
-
-[credential]
-helper = /opt/boxen/bin/boxen-git-credential
