@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+require 'pathname'
+require 'fileutils'
+include FileUtils
+
+# from http://errtheblog.com/posts/89-huba-huba
+
+# This is idempotent, meaning you can run it over and over again without fear of
+# breaking anything. Use it as an installer or to upgrade after merging from an
+# upstream fork.
+
+HOME = File.expand_path('~')
+DOTFILES_ROOT = Pathname.new File.expand_path('../../', __FILE__)
+
+chdir DOTFILES_ROOT do
+  Dir['*'].each do |file|
+    next if file =~ /install/ || file =~ /README/
+    target = File.join(HOME, ".#{file}")
+    `ln -ns #{File.expand_path file} #{target}`
+  end
+end
