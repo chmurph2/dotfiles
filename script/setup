@@ -14,7 +14,7 @@ DOTFILES_ROOT = Pathname.new File.expand_path('../../', __FILE__)
 
 chdir DOTFILES_ROOT do
   Dir['*'].each do |file|
-    next if file =~ /install/ || file =~ /README/
+    next if file =~ /script/ || file =~ /README/
     target = File.join(HOME, ".#{file}")
     `ln -ns #{File.expand_path file} #{target}`
   end
