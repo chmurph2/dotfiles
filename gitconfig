@@ -38,3 +38,5 @@
   autosetuprebase = always
 [hub]
   protocol = https
+[credential]
+	helper = osxkeychain
