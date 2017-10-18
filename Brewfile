@@ -40,6 +40,7 @@ cask "soulver"
 cask "spotify"
 cask "sublime-text"
 cask "transmit"
+cask "textexpander5"
 cask "vlc"
 cask "wifi-explorer"
 
@@ -61,5 +62,4 @@ mas "Tweetbot for Twitter", id: 557168941
 # MyHarmony.app
 # Microsoft Remote Desktop 8.0 (mas)
 # ScanSnap.app
-# TextExpander 4
 
