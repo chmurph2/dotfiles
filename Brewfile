@@ -40,13 +40,14 @@ cask "soulver"
 cask "spotify"
 cask "sublime-text"
 cask "transmit"
-cask "textexpander5"
+#cask "textexpander5" # Keeps re-installing on each run.
 cask "vlc"
 cask "wifi-explorer"
 
 # App Store
 mas "Be Focused Pro - Focus Timer & Goal Tracker", id: 961632517
 mas "Drop Shadow", id: 484550417
+mas "Froq", id: 894339623
 mas "GIPHY Capture. The GIF Maker", id: 668208984
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
