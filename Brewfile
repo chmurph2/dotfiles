@@ -23,6 +23,7 @@ cask "dropbox"
 cask "fantastical"
 cask "firefox"
 cask "fluid"
+cask "flux"
 cask "google-chrome"
 cask "google-backup-and-sync"
 cask "handbrake"
@@ -42,15 +43,22 @@ cask "vlc"
 cask "wifi-explorer"
 
 # App Store
+mas "Be Focused Pro - Focus Timer & Goal Tracker", id: 961632517
 mas "Drop Shadow", id: 484550417
+mas "GIPHY Capture. The GIF Maker", id: 668208984
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
 mas "Monosnap", id: 540348655
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Speedtest by Ookla", id: 1153157709
 mas "Things 3", id: 904280696
 mas "Tweetbot for Twitter", id: 557168941
 
 # manually reinstall:
 # Froq.app
-# Flux.app
 # MyHarmony.app
+# Microsoft Remote Desktop 8.0 (mas)
 # ScanSnap.app
 # TextExpander 4
 
