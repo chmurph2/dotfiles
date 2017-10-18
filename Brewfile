@@ -58,7 +58,7 @@ mas "Things 3", id: 904280696
 mas "Tweetbot for Twitter", id: 557168941
 
 # manually reinstall:
-# Froq.app
+# Froq 2.app
 # MyHarmony.app
 # Microsoft Remote Desktop 8.0 (mas)
 # ScanSnap.app
