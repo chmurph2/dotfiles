@@ -129,6 +129,9 @@ function fuckit {
   sudo networksetup -setdnsservers Wi-Fi empty
 }
 
+# Tail Puma logs
+alias tlp="tail -f ~/Library/Logs/puma-dev.log"
+
 ############################################################
 ## Ruby
 ############################################################
