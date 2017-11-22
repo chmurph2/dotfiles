@@ -8,6 +8,7 @@ brew "git"
 brew "hub"
 brew "mas"
 brew "postgresql", restart_service: :changed
+brew "tldr"
 brew "watch"
 brew "wget"
 
