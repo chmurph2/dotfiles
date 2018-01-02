@@ -40,3 +40,5 @@
   protocol = https
 [credential]
 	helper = osxkeychain
+[commit]
+	gpgsign = true
