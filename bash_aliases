@@ -162,6 +162,7 @@ function rt {
   fi
 }
 
+alias rbenv_self_update_all='for i in $( rbenv versions --bare ); do RBENV_VERSION=$i gem update --system && echo "\n$(ruby -v) using rubygems $(gem --version)\n"; done'
 
 ############################################################
 ## Bundler
