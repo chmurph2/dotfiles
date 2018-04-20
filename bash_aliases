@@ -104,7 +104,7 @@ alias vu='v up'
 alias vb='v box'
 
 ############################################################
-## OS X
+## MacOS
 ############################################################
 
 # Clear Apple’s System Logs to improve shell startup speed
