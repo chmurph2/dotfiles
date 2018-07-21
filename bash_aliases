@@ -33,7 +33,7 @@ alias lt="ls -larth"
 ## Git
 ############################################################
 alias g="git"
-alias gb="git branch -a -v"
+alias gb="tput rmam; git branch -a -v; tput smam" # avoid word-wrapping in terminal
 alias gc="git commit -v"
 alias gca="git commit -v -a"
 alias gd="git diff --color"
