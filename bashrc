@@ -46,9 +46,14 @@ conditionally_prefix_manpath ~/man
 ## General development configurations
 ###########################################################
 
-# Enable shims and autocompletion:
+# rbenv: Enable shims and autocompletion:
 if [ `which rbenv 2> /dev/null` ]; then
   eval "$(rbenv init -)"
+fi
+
+# nodenv
+if [ `which nodenv 2> /dev/null` ]; then
+  eval "$(nodenv init -)"
 fi
 
 ############################################################
