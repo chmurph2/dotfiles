@@ -6,6 +6,8 @@ brew "autojump"
 brew "bash-completion"
 brew "git"
 brew "hub"
+# signin is currently broken on Mojave: download version 1.4.2+ https://github.com/mas-cli/mas/releases/tag/v1.4.2
+# https://github.com/mas-cli/mas/issues/164
 brew "mas"
 brew "postgresql", restart_service: :changed
 brew "tldr"
@@ -13,18 +15,16 @@ brew "watch"
 brew "wget"
 
 # casks
-cask "1password"
-cask "alfred"
+
 cask "anylist"
 cask "audiobook-builder"
 cask "backblaze"
 cask "bartender"
 cask "choosy"
 cask "daisydisk"
-cask "dropbox"
 cask "fantastical"
 cask "firefox"
-cask "fluid"
+# cask "fluid" # installer is broken as of 10/16/2018
 cask "flux"
 cask "google-chrome"
 cask "google-backup-and-sync"
@@ -32,8 +32,10 @@ cask "gpg-suite"
 cask "handbrake"
 cask "istat-menus"
 cask "iterm2"
+cask "mailplane"
 cask "moom"
 cask "mysqlworkbench"
+cask "homebrew/cask-drivers/logitech-myharmony"
 cask "nvalt"
 cask "rowanj-gitx"
 cask "slack"
@@ -41,9 +43,9 @@ cask "soulver"
 cask "spotify"
 cask "sublime-text"
 cask "transmit"
-#cask "textexpander5" # Keeps re-installing on each run.
+cask "textexpander5"
 cask "vlc"
-cask "wifi-explorer"
+# cask "wifi-explorer" # 404s
 
 # App Store
 mas "Be Focused Pro - Focus Timer & Goal Tracker", id: 961632517
@@ -59,9 +61,11 @@ mas "Speedtest by Ookla", id: 1153157709
 mas "Things 3", id: 904280696
 mas "Tweetbot for Twitter", id: 557168941
 
+# I always install and configure these manually before getting Strap'd AF
+# cask "1password"
+# cask "alfred"
+# cask "dropbox"
+
 # manually reinstall:
-# Froq 2.app
-# MyHarmony.app
-# Microsoft Remote Desktop 8.0 (mas)
 # ScanSnap.app
 
