@@ -20,4 +20,8 @@ chdir DOTFILES_ROOT do
   end
 end
 
+# Brewfile isn't a dotfile
 system("ln -ns #{File.join(HOME, '.Brewfile')} Brewfile")
+
+# always overwrite a gitconfig that may have been generated elsewhere
+system("ln -nsF #{File.join(DOTFILES_ROOT, 'gitconfig')} .gitconfig")
