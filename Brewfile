@@ -26,6 +26,7 @@ cask "fantastical"
 cask "firefox"
 # cask "fluid" # installer is broken as of 10/16/2018
 cask "flux"
+cask "google-chat"
 cask "google-chrome"
 cask "google-backup-and-sync"
 cask "gpg-suite"
