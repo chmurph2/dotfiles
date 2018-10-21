@@ -58,6 +58,7 @@ mas "Keynote", id: 409183694
 mas "Monosnap", id: 540348655
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
+mas "Paprika Recipe Manager 3", id: 1303222628
 mas "Speedtest by Ookla", id: 1153157709
 mas "Things 3", id: 904280696
 mas "Tweetbot for Twitter", id: 557168941
