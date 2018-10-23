@@ -50,6 +50,7 @@ cask "vlc"
 
 # App Store
 mas "Be Focused Pro - Focus Timer & Goal Tracker", id: 961632517
+mas "Deliveries", id: 924726344
 mas "Drop Shadow", id: 484550417
 mas "Froq", id: 894339623
 mas "GIPHY Capture. The GIF Maker", id: 668208984
