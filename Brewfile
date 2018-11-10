@@ -24,7 +24,7 @@ cask "choosy"
 cask "daisydisk"
 cask "fantastical"
 cask "firefox"
-# cask "fluid" # installer is broken as of 10/16/2018
+cask "fluid"
 cask "flux"
 cask "google-chat"
 cask "google-chrome"
@@ -33,20 +33,21 @@ cask "gpg-suite"
 cask "handbrake"
 cask "istat-menus"
 cask "iterm2"
+cask "homebrew/cask-drivers/logitech-myharmony"
 cask "mailplane"
 cask "moom"
 cask "mysqlworkbench"
-cask "homebrew/cask-drivers/logitech-myharmony"
 cask "nvalt"
+cask "postman"
 cask "rowanj-gitx"
 cask "slack"
 cask "soulver"
 cask "spotify"
+cask "sublime-merge"
 cask "sublime-text"
 cask "transmit"
 cask "textexpander5"
 cask "vlc"
-# cask "wifi-explorer" # 404s
 
 # App Store
 mas "Be Focused Pro - Focus Timer & Goal Tracker", id: 961632517
@@ -63,6 +64,7 @@ mas "Paprika Recipe Manager 3", id: 1303222628
 mas "Speedtest by Ookla", id: 1153157709
 mas "Things 3", id: 904280696
 mas "Tweetbot for Twitter", id: 557168941
+mas "wifi-explorer", id: 494803304
 
 # I always install and configure these manually before getting Strap'd AF
 # cask "1password"
