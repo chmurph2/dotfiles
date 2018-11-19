@@ -6,8 +6,6 @@ brew "autojump"
 brew "bash-completion"
 brew "git"
 brew "hub"
-# signin is currently broken on Mojave: download version 1.4.2+ https://github.com/mas-cli/mas/releases/tag/v1.4.2
-# https://github.com/mas-cli/mas/issues/164
 brew "mas"
 brew "postgresql", restart_service: :changed
 brew "tldr"
@@ -49,7 +47,7 @@ cask "transmit"
 cask "textexpander5"
 cask "vlc"
 
-# App Store
+# Mac App Store
 mas "Be Focused Pro - Focus Timer & Goal Tracker", id: 961632517
 mas "Deliveries", id: 924726344
 mas "Drop Shadow", id: 484550417
@@ -73,4 +71,3 @@ mas "wifi-explorer", id: 494803304
 
 # manually reinstall:
 # ScanSnap.app
-
