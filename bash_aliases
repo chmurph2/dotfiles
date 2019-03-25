@@ -147,7 +147,8 @@ alias guard="bundle exec guard"
 function rt {
   FILE_HINT=`echo $1 | cut -f1 -d:`
   TEST_REGEX=`echo $1 | cut -f2 -d:`
-  FILE_PATH=`find test/* -maxdepth 3 -name ${FILE_HINT}_test.rb`
+  # FILE_PATH=`find test/* -maxdepth 4 -name ${FILE_HINT}_test.rb`
+  FILE_PATH=`find spec/* -maxdepth 4 -name ${FILE_HINT}_spec.rb`
   if [ -z $FILE_PATH ];
     then
     echo Couldn\'t find file for $FILE_HINT
@@ -212,9 +213,7 @@ alias deploy_hstaging='hstaging maintenance:on && git push staging && hstaging r
 ## Rails
 ############################################################
 
-alias ss="./script/server"
-alias sg="./script/generate"
-alias sc="./script/console"
+alias ss="spring status && echo && spring stop"
 alias tl="tail -f log/development.log"
 alias ttr="touch tmp/restart.txt"
 
