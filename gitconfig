@@ -12,7 +12,8 @@
   co = checkout
   st = status
   br = branch
-  w = whatchanged
+  w  = whatchanged
+  pf = push --force-with-lease
 [apply]
   whitespace = nowarn
 [color]
