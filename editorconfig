@@ -14,6 +14,6 @@ indent_size = 2
 insert_final_newline = true
 trim_trailing_whitespace = true
 
-[*.md] # Markdown
+# [*.md] # Markdown
 # two spaces at the end of a line is a <br/>
-trim_trailing_whitespace = false
+# trim_trailing_whitespace = false
