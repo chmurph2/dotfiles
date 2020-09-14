@@ -132,7 +132,7 @@ function fuckit {
 }
 
 # Tail Puma logs
-alias tlp="tail -f ~/Library/Logs/puma-dev.log"
+alias tlp="tail -F ~/Library/Logs/puma-dev.log"
 
 ############################################################
 ## Ruby
@@ -147,8 +147,8 @@ alias guard="bundle exec guard"
 function rt {
   FILE_HINT=`echo $1 | cut -f1 -d:`
   TEST_REGEX=`echo $1 | cut -f2 -d:`
-  # FILE_PATH=`find test/* -maxdepth 4 -name ${FILE_HINT}_test.rb`
-  FILE_PATH=`find spec/* -maxdepth 4 -name ${FILE_HINT}_spec.rb`
+  FILE_PATH=`find test/* -maxdepth 4 -name ${FILE_HINT}_test.rb`
+  # FILE_PATH=`find spec/* -maxdepth 4 -name ${FILE_HINT}_spec.rb`
   if [ -z $FILE_PATH ];
     then
     echo Couldn\'t find file for $FILE_HINT
@@ -158,10 +158,10 @@ function rt {
   if [[ $1 =~ ":" ]];
     then
     echo Running $FILE_PATH -n /$TEST_REGEX/
-    bundle exec ruby -Itest $FILE_PATH -n /$TEST_REGEX/
+    DISABLE_SIMPLE_COV=true bundle exec ruby -Itest $FILE_PATH -n /$TEST_REGEX/
   else
     echo Running $FILE_PATH
-    bundle exec ruby -Itest $FILE_PATH
+    DISABLE_SIMPLE_COV=true bundle exec ruby -Itest $FILE_PATH
   fi
 }
 
@@ -214,7 +214,7 @@ alias deploy_hstaging='hstaging maintenance:on && git push staging && hstaging r
 ############################################################
 
 alias ss="spring status && echo && spring stop"
-alias tl="tail -f log/development.log"
+alias tl="tail -F log/development.log"
 alias ttr="touch tmp/restart.txt"
 
  ############################################################
