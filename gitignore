@@ -33,3 +33,6 @@ public/stylesheets
 
 ## ORACLE BS
 sqlnet.log
+
+## HOMEBREW
+Brewfile.lock.json
