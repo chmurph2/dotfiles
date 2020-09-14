@@ -1,12 +1,23 @@
 require 'irb/completion'
 require 'irb/ext/save-history'
-IRB.conf[:SAVE_HISTORY] = 100
+IRB.conf[:SAVE_HISTORY] = 1000
 IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb_history"
 IRB.conf[:PROMPT_MODE] = :SIMPLE
+IRB.conf[:AUTO_INDENT] = true
 
-if ENV.include?('RAILS_ENV') && !Object.const_defined?('RAILS_DEFAULT_LOGGER')
-  require 'logger'
-  RAILS_DEFAULT_LOGGER = Logger.new(STDOUT)
+if Kernel.const_defined?("Rails")
+  def show_logs
+    Rails.logger = Logger.new(STDOUT)
+  end
+end
+
+if defined?(Rails::Console)
+  def show_active_record
+    return false unless defined?(ActiveRecord)
+    ActiveRecord::Base.logger = Logger.new(STDOUT)
+    true
+  end
+  alias show_ar show_active_record
 end
 
 # Method to pretty-print object methods
