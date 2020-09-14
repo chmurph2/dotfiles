@@ -6,6 +6,8 @@ brew "autojump"
 brew "bash-completion"
 brew "git"
 brew "hub"
+brew "kubectx"
+brew "kubernetes-cli"
 brew "mas"
 brew "postgresql", restart_service: :changed
 brew "prettier"
@@ -14,10 +16,8 @@ brew "watch"
 brew "wget"
 
 # casks
-
 cask "anylist"
 cask "audiobook-builder"
-cask "backblaze"
 cask "bartender"
 cask "brooklyn"
 cask "daisydisk"
@@ -68,3 +68,6 @@ mas "wifi-explorer", id: 494803304
 # cask "1password"
 # cask "alfred"
 # cask "dropbox"
+
+# This seems to uninstall backblaze instead of installing it
+# cask "backblaze"
