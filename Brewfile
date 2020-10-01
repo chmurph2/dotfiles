@@ -1,7 +1,7 @@
 # taps
-tap "caskroom/cask" # extends Homebrew to install GUI macOS applications
+tap "homebrew/cask" # extends Homebrew to install GUI macOS applications
 
-# brews
+# # brews
 brew "autojump"
 brew "bash-completion"
 brew "git"
@@ -19,12 +19,10 @@ brew "wget"
 cask "anylist"
 cask "audiobook-builder"
 cask "bartender"
-cask "brooklyn"
 cask "daisydisk"
-cask "fantastical"
-cask "firefox"
+# cask "fantastical" # installs old Fanstastical 2
+# cask "firefox" # need to install the enterprise edition
 cask "fluid"
-cask "flux"
 cask "google-chat"
 cask "google-chrome"
 cask "google-backup-and-sync"
@@ -34,21 +32,17 @@ cask "iterm2"
 cask "mailplane"
 cask "moom"
 cask "mysqlworkbench"
-cask "nvalt"
 cask "postman"
 cask "qsync-client"
-cask "rowanj-gitx"
 cask "slack"
-cask "soulver"
+# cask "soulver" # installs newer Soulver 3
 cask "spotify"
 cask "sublime-merge"
 cask "sublime-text"
 cask "transmit"
-cask "textexpander5"
 cask "vlc"
 
 # Mac App Store
-mas "Be Focused Pro - Focus Timer & Goal Tracker", id: 961632517
 mas "Deliveries", id: 924726344
 mas "Drop Shadow", id: 484550417
 mas "Froq", id: 894339623
