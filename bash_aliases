@@ -1,13 +1,3 @@
-# Adds an alias to the current shell and to this file.
-# Borrowed from Mislav (http://github.com/mislav/dotfiles/tree/master/bash_aliases)
-add-alias ()
-{
-   local name=$1 value=$2
-   echo "alias $name='$value'" >> ~/.bash_aliases
-   eval "alias $name='$value'"
-   alias $name
-}
-
 ############################################################
 ## List
 ############################################################
