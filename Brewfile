@@ -23,7 +23,6 @@ cask "daisydisk"
 # cask "fantastical" # installs old Fanstastical 2
 # cask "firefox" # need to install the enterprise edition
 cask "fluid"
-cask "google-chat"
 cask "google-chrome"
 cask "google-backup-and-sync"
 cask "handbrake"
@@ -31,7 +30,6 @@ cask "istat-menus"
 cask "iterm2"
 cask "mailplane"
 cask "moom"
-cask "mysqlworkbench"
 cask "postman"
 cask "qsync-client"
 cask "slack"
@@ -46,10 +44,8 @@ cask "vlc"
 mas "Deliveries", id: 924726344
 mas "Drop Shadow", id: 484550417
 mas "Froq", id: 894339623
-mas "GIPHY Capture. The GIF Maker", id: 668208984
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
-mas "Monosnap", id: 540348655
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Paprika Recipe Manager 3", id: 1303222628
