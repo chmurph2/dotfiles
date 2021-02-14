@@ -12,3 +12,6 @@ codeintel
 
 # Ruby
 gemrc
+
+# k8s
+bin/k8s*
