@@ -25,7 +25,7 @@ conditionally_prefix_path /usr/local/heroku/bin:$PATH
 conditionally_prefix_path ~/bin
 conditionally_prefix_path ~/bin/private
 
-PATH=.:./bin:${PATH}
+PATH=./bin:${PATH}
 
 ############################################################
 ## MANPATH
