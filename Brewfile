@@ -9,7 +9,6 @@ brew "hub"
 brew "kubectx"
 brew "kubernetes-cli"
 brew "mas"
-brew "postgresql", restart_service: :changed
 brew "prettier"
 brew "tldr"
 brew "watch"
