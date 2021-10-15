@@ -4,6 +4,7 @@ tap "homebrew/cask" # extends Homebrew to install GUI macOS applications
 # # brews
 brew "autojump"
 brew "bash-completion"
+brew "ffmpeg" # for youtube-dl audio extraction
 brew "git"
 brew "hub"
 brew "kubectx"
@@ -13,6 +14,7 @@ brew "prettier"
 brew "tldr"
 brew "watch"
 brew "wget"
+brew "youtube-dl"
 
 # casks
 cask "anylist"
@@ -30,7 +32,6 @@ cask "iterm2"
 cask "mailplane"
 cask "moom"
 cask "postman"
-cask "qsync-client"
 cask "slack"
 # cask "soulver" # installs newer Soulver 3
 cask "spotify"
