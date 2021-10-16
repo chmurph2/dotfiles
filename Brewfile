@@ -20,7 +20,7 @@ brew "youtube-dl"
 cask "anylist"
 cask "audiobook-builder"
 cask "daisydisk"
-# cask "fantastical" # installs old Fanstastical 2
+cask "fantastical"
 # cask "firefox" # need to install the enterprise edition
 cask "google-chrome"
 cask "handbrake"
