@@ -17,8 +17,8 @@ function conditionally_prefix_path {
   fi
 }
 
-conditionally_prefix_path /opt/homebrew/bin
 conditionally_prefix_path /usr/local/bin
+conditionally_prefix_path /opt/homebrew/bin
 conditionally_prefix_path /usr/local/sbin
 conditionally_prefix_path /usr/local/share/npm/bin
 conditionally_prefix_path /usr/texbin
