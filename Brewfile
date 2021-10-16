@@ -19,22 +19,32 @@ brew "youtube-dl"
 # casks
 cask "anylist"
 cask "audiobook-builder"
+cask "backblaze"
+cask "choosy"
+cask "cleanshot"
 cask "daisydisk"
 cask "fantastical"
+cask "flotato"
 # cask "firefox" # need to install the enterprise edition
 cask "google-chrome"
+cask "google-drive"
 cask "handbrake"
 cask "istat-menus"
 cask "iterm2"
 cask "mailplane"
 cask "moom"
 cask "postman"
+# cask "qsync-client" # Errors with "Error: Not upgrading 1 `installer manual` cask."
+cask "rocket"
 cask "slack"
+cask "soundsource"
 # cask "soulver" # installs newer Soulver 3
 cask "sublime-merge"
 cask "sublime-text"
+cask "the-archive-browser"
 cask "transmit"
 cask "vlc"
+cask "zoom"
 
 # Mac App Store
 mas "Deliveries", id: 924726344
