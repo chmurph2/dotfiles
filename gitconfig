@@ -39,7 +39,5 @@
   autosetuprebase = always
 [hub]
   protocol = https
-[commit]
-	gpgsign = true
 [credential]
 	helper = osxkeychain
