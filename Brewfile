@@ -19,13 +19,10 @@ brew "youtube-dl"
 # casks
 cask "anylist"
 cask "audiobook-builder"
-cask "bartender"
 cask "daisydisk"
 # cask "fantastical" # installs old Fanstastical 2
 # cask "firefox" # need to install the enterprise edition
-cask "fluid"
 cask "google-chrome"
-cask "google-backup-and-sync"
 cask "handbrake"
 cask "istat-menus"
 cask "iterm2"
@@ -34,7 +31,6 @@ cask "moom"
 cask "postman"
 cask "slack"
 # cask "soulver" # installs newer Soulver 3
-cask "spotify"
 cask "sublime-merge"
 cask "sublime-text"
 cask "transmit"
@@ -44,10 +40,6 @@ cask "vlc"
 mas "Deliveries", id: 924726344
 mas "Drop Shadow", id: 484550417
 mas "Froq", id: 894339623
-mas "iMovie", id: 408981434
-mas "Keynote", id: 409183694
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
 mas "Paprika Recipe Manager 3", id: 1303222628
 mas "Speedtest by Ookla", id: 1153157709
 mas "Things 3", id: 904280696
