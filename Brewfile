@@ -45,6 +45,7 @@ cask "sublime-text"
 cask "the-archive"
 cask "transmit"
 cask "vlc"
+cask "visual-studio-code" # for Codespaces (for now)
 cask "zoom"
 
 # Mac App Store
