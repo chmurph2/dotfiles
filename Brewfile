@@ -33,6 +33,7 @@ cask "handbrake"
 cask "istat-menus"
 cask "iterm2"
 cask "mailplane"
+cask "maestral"
 cask "moom"
 cask "postman"
 # cask "qsync-client" # Errors with "Error: Not upgrading 1 `installer manual` cask."
@@ -61,7 +62,6 @@ mas "wifi-explorer", id: 494803304
 # I always install and configure these manually before getting Strap'd AF
 # cask "1password"
 # cask "alfred"
-# cask "dropbox"
 
 # This seems to uninstall backblaze instead of installing it
 # cask "backblaze"
