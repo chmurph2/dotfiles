@@ -22,6 +22,7 @@ cask "1password"
 cask "alfred"
 cask "anylist"
 cask "audiobook-builder"
+cask "basecamp"
 # cask "backblaze" # doesn't seem to install the app as of 12/18/21
 cask "choosy"
 cask "cleanshot"
@@ -47,17 +48,17 @@ cask "sublime-merge"
 cask "sublime-text"
 cask "the-archive"
 cask "transmit"
+cask "tweetbot"
 cask "vlc"
 cask "visual-studio-code" # for Codespaces (for now)
 cask "zoom"
 
 # Mac App Store
 mas "Brother iPrint&Scan", id: 1193539993
-mas "Deliveries", id: 924726344
+mas "Deliveries: a package tracker", id: 290986013
 mas "Drop Shadow", id: 484550417
 mas "Froq", id: 894339623
 mas "Paprika Recipe Manager 3", id: 1303222628
 mas "Speedtest by Ookla", id: 1153157709
 mas "Things 3", id: 904280696
-mas "Tweetbot for Twitter", id: 557168941
 mas "wifi-explorer", id: 494803304
