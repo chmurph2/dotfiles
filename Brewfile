@@ -43,7 +43,7 @@ cask "postman"
 cask "rocket"
 cask "slack"
 cask "soundsource"
-# cask "soulver" # installs newer Soulver 3
+cask "soulver2"
 cask "sublime-merge"
 cask "sublime-text"
 cask "the-archive"
