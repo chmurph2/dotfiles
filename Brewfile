@@ -40,7 +40,7 @@ cask "istat-menus"
 cask "iterm2"
 cask "homebrew/cask-drivers/logitech-g-hub" # you're doing it wrong, Logitech
 cask "maestral"
-cask "mailplane"
+cask "mimestream"
 cask "moom"
 cask "postman"
 # cask "qsync-client" # Errors with "Error: Not upgrading 1 `installer manual` cask."
