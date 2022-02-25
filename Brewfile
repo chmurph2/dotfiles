@@ -30,7 +30,7 @@ cask "cleanshot"
 cask "daisydisk"
 cask "fantastical"
 cask "flotato"
-# cask "firefox" # need to install the enterprise edition
+cask "firefox"
 cask "google-chrome"
 cask "google-drive"
 cask "handbrake"
