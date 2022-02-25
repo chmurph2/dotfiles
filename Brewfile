@@ -1,5 +1,6 @@
 # taps
 tap "homebrew/cask" # extends Homebrew to install GUI macOS applications
+tap "microsoft/git" # for Git Credential Manager
 
 # # brews
 brew "autojump"
@@ -31,6 +32,7 @@ cask "daisydisk"
 cask "fantastical"
 cask "firefox"
 cask "flotato"
+cask "git-credential-manager-core"
 cask "google-chrome"
 cask "google-drive"
 cask "handbrake"
