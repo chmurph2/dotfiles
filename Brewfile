@@ -32,7 +32,7 @@ cask "daisydisk"
 cask "fantastical"
 cask "firefox"
 cask "flotato"
-cask "git-credential-manager-core"
+# cask "git-credential-manager-core" # not working for me
 cask "google-chrome"
 cask "google-drive"
 cask "handbrake"
