@@ -2,7 +2,7 @@
 tap "homebrew/cask" # extends Homebrew to install GUI macOS applications
 tap "microsoft/git" # for Git Credential Manager
 
-# # brews
+# brews
 brew "autojump"
 brew "bash-completion"
 brew "ffmpeg" # for youtube-dl audio extraction
@@ -38,7 +38,7 @@ cask "google-drive"
 cask "handbrake"
 cask "istat-menus"
 cask "iterm2"
-cask "homebrew/cask-drivers/logitech-g-hub" # you're doing it wrong, Logitech
+# cask "homebrew/cask-drivers/logitech-g-hub" # you're doing it wrong, Logitech
 cask "maestral"
 cask "mimestream"
 cask "moom"
@@ -48,12 +48,12 @@ cask "slack"
 cask "soundsource"
 cask "soulver2"
 cask "sublime-merge"
-cask "sublime-text"
+# cask "sublime-text"
 cask "the-archive"
 cask "transmit"
 cask "tweetbot"
 cask "vlc"
-cask "visual-studio-code" # for Codespaces (for now)
+cask "visual-studio-code"
 cask "zoom"
 
 # Mac App Store
