@@ -16,14 +16,14 @@ chdir DOTFILES_ROOT do
   Dir['*'].each do |file|
     next if file =~ /script/ || file =~ /README/
     target = File.join(HOME, ".#{file}")
-    `ln -ns #{File.expand_path file} #{target}`
+    `ln -nsf #{File.expand_path file} #{target}`
   end
 end
 
 # ~/Brewfile isn't a dotfile
 target = File.join(HOME, 'Brewfile')
-system("ln -ns #{File.join(DOTFILES_ROOT, 'Brewfile')} #{target}")
+system("ln -nsf #{File.join(DOTFILES_ROOT, 'Brewfile')} #{target}")
 
 # always overwrite a ~/.gitconfig that may have been generated elsewhere
 target = File.join(HOME, '.gitconfig')
-system("ln -nsF #{File.join(DOTFILES_ROOT, 'gitconfig')} #{target}")
+system("ln -nsf #{File.join(DOTFILES_ROOT, 'gitconfig')} #{target}")
