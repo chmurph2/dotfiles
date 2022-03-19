@@ -3,9 +3,14 @@
 # [user]
 #   email =
 #   name =
-# [github]
-#   user =
+#   signingkey = 
+# [gpg]
+#   program = gpg
+# [core]
+#   editor = code --wait
 
+[github]
+  user = chmurph2
 [include]
   path = ~/.gitconfig_local
 [alias]
