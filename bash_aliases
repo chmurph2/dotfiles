@@ -99,23 +99,6 @@ alias vb='v box'
 ## MacOS
 ############################################################
 
-# Clear Apple’s System Logs to improve shell startup speed
-alias clearsyslogs="sudo rm -rfv /private/var/log/asl/*.asl"
-
-# Get rid of those pesky .DS_Store files recursively
-alias dstore-clean='find . -type f -name .DS_Store -print0 | xargs -0 rm'
-
-# Track who is listening to your iTunes music
-alias whotunes='lsof -r 2 -n -P -F n -c iTunes -a -i TCP@`hostname`:3689'
-
-# Java home
-alias cdjava="cd /system/Library/Frameworks/JavaVM.framework/Versions/1.6/Home"
-
-# Open a man page in TextMate
-tman () {
-  MANWIDTH=160 MANPAGER='col -bx' man $@ | mate
-}
-
 # DNS issues got you down?
 function fuckit {
   sudo networksetup -setdnsservers Wi-Fi empty
