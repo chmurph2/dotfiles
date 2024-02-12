@@ -169,7 +169,7 @@ fi
 ## Bash Completion, if available
 ############################################################
 
-if [ -f /opt/homebrew/etc/bash_completion ]; then
+if [ -f /opt/homebrew/etc/bash_completion ] && [ `uname -m` == "arm64" ]; then
   . /opt/homebrew/etc/bash_completion
 elif [ -f /usr/local/etc/bash_completion ]; then
   . /usr/local/etc/bash_completion
@@ -177,7 +177,7 @@ elif  [ -f /etc/bash_completion ]; then
   . /etc/bash_completion
 elif  [ -f /etc/profile.d/bash_completion ]; then
   . /etc/profile.d/bash_completion
-elif [ -e ~/.bash_completion ]; then
+elif [ -f ~/.bash_completion ]; then
   # Fallback. This should be sourced by the above scripts.
   . ~/.bash_completion
 fi
@@ -200,8 +200,8 @@ fi
 ## Ruby Performance Boost (see https://gist.github.com/1688857)
 ############################################################
 
-export RUBY_GC_MALLOC_LIMIT=60000000
-export RUBY_FREE_MIN=200000 # Ruby <= 2.0
-export RUBY_GC_HEAP_FREE_SLOTS=200000 # Ruby >= 2.1
+# export RUBY_GC_MALLOC_LIMIT=60000000
+# export RUBY_FREE_MIN=200000 # Ruby <= 2.0
+# export RUBY_GC_HEAP_FREE_SLOTS=200000 # Ruby >= 2.1
 
 
