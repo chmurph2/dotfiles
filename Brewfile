@@ -1,5 +1,4 @@
 # taps
-tap "homebrew/cask" # extends Homebrew to install GUI macOS applications
 tap "microsoft/git" # for Git Credential Manager
 
 # brews
@@ -14,7 +13,7 @@ brew "mas"
 brew 'nodenv' # run nodenv init in your shell to enable
 brew 'node-build'
 brew "php" # for https://github.com/gharlan/alfred-github-workflow
-bew "pyenv" # run pyenv init in your shell to enable
+brew "pyenv" # run pyenv init in your shell to enable
 brew "prettier"
 brew "rbenv" # run rbenv init in your shell to enable
 brew "ruby-build"
