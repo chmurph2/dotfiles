@@ -6,6 +6,7 @@ brew "autojump"
 brew "bash-completion"
 brew "ffmpeg" # for youtube-dl audio extraction
 brew "git"
+brew "gh" # GitHub CLI
 brew "hub"
 brew "kubectx"
 brew "kubernetes-cli"
@@ -17,6 +18,7 @@ brew "pyenv" # run pyenv init in your shell to enable
 brew "prettier"
 brew "rbenv" # run rbenv init in your shell to enable
 brew "ruby-build"
+brew "shellcheck" # for shell script linting
 brew "tldr"
 brew "watch"
 brew "wget"
@@ -45,7 +47,7 @@ cask "postman"
 cask "rocket"
 cask "slack"
 cask "soundsource"
-cask "soulver2"
+cask "soulver"
 cask "sublime-merge"
 cask "the-archive"
 cask "transmit"
@@ -56,7 +58,6 @@ cask "zoom"
 # Mac App Store
 mas "Brother iPrint&Scan", id: 1193539993
 mas "Deliveries: a package tracker", id: 290986013
-mas "Drop Shadow", id: 484550417
 mas "Froq", id: 894339623
 mas "Paprika Recipe Manager 3", id: 1303222628
 mas "Speedtest by Ookla", id: 1153157709
