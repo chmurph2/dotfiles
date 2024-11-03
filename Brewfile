@@ -46,7 +46,7 @@ cask "orbstack"
 cask "postman"
 cask "rocket"
 cask "slack"
-cask "soundsource"
+# cask "soundsource"
 cask "soulver"
 cask "sublime-merge"
 cask "the-archive"
@@ -57,9 +57,9 @@ cask "zoom"
 
 # Mac App Store
 mas "Brother iPrint&Scan", id: 1193539993
-mas "Deliveries: a package tracker", id: 290986013
 mas "Froq", id: 894339623
 mas "Paprika Recipe Manager 3", id: 1303222628
+mas "Parcel - Delivery Tracking", id: 639968404
 mas "Speedtest by Ookla", id: 1153157709
 mas "Things 3", id: 904280696
 mas "wifi-explorer", id: 494803304
