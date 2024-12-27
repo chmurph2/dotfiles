@@ -22,10 +22,11 @@ brew "shellcheck" # for shell script linting
 brew "tldr"
 brew "watch"
 brew "wget"
-brew "youtube-dl"
+# brew "youtube-dl" # install manually, see personal notes
 
 # casks
 cask "1password"
+cask "acorn"
 cask "alfred"
 cask "anylist"
 cask "audiobook-builder"
@@ -46,7 +47,6 @@ cask "orbstack"
 cask "postman"
 cask "rocket"
 cask "slack"
-# cask "soundsource"
 cask "soulver"
 cask "sublime-merge"
 cask "the-archive"
