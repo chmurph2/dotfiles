@@ -14,22 +14,19 @@ These are my dotfiles that are generic enough to share across the computers I us
 Clone (or fork) this repository, and update all the git submodules within.
 
     $ cd ~
-    $ git clone git@github.com:chmurph2/dotfiles.git .dotfiles # or wherever you prefer
-    $ cd .dotfiles
-    $ git submodule update --init --recursive
+    $ git clone git@github.com:chmurph2/dotfiles.git ~/src/dotfiles # or wherever you prefer
+    $ cd ~/src/dotfiles
 
 **(Option 1)** If you'd like to symlink everything within this repository to your
 home directory, run `install.rb`.
 
-    $ cd ~/.dotfiles
+    $ cd ~/src/dotfiles
     $ ./install.rb
 
 **(Option 2)** If you'd like to just symlink one or more configurations to your
 home directory manually, you can.
 
-    $ cd ~/.dotfiles
-    $ git submodule sync
-    $ git submodule update --init --recursive
+    $ cd ~/src/dotfiles
     $ ln -ns bashrc ~/.bashrc
 
 **(Option 3)** Just look around and pick and choose what you like for your own

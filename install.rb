@@ -17,6 +17,3 @@ Dir['*'].each do |file|
   end
   `ln -ns #{File.expand_path file} #{target}`
 end
-
-`git submodule sync`
-`git submodule update --init --recursive`
