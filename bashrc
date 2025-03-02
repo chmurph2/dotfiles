@@ -166,6 +166,14 @@ if [ -e ~/.bash_aliases ] ; then
 fi
 
 ############################################################
+## Git Completion, if available
+############################################################
+
+if [ -f "/usr/share/bash-completion/completions/git" ]; then
+  . /usr/share/bash-completion/completions/git
+fi
+
+############################################################
 ## Bash Completion, if available
 ############################################################
 
