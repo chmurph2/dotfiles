@@ -6,8 +6,6 @@
 #   helper = osxkeychain
 # [github]
 #   user =
-# [gpg]
-#   program = gpg
 # [user]
 #   email =
 #   name =
@@ -40,7 +38,7 @@
 [fetch]
   prune = true
 [gpg]
-  program = gpg1
+  program = gpg
 [hub]
   protocol = https
 [include]
