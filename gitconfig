@@ -3,14 +3,17 @@
 # [user]
 #   email =
 #   name =
-#   signingkey = 
+#   signingkey =
 # [gpg]
 #   program = gpg
 # [core]
-#   editor = code --wait
+#   editor = cursor --wait
+# [github]
+#   user =
+# [credential]
+#   helper = osxkeychain
 
-[github]
-  user = chmurph2
+
 [include]
   path = ~/.gitconfig_local
 [alias]
@@ -19,6 +22,8 @@
   br = branch
   w  = whatchanged
   pf = push --force-with-lease
+  amend = commit --amend
+  unstage = reset HEAD --
 [apply]
   whitespace = nowarn
 [color]
@@ -28,6 +33,11 @@
   interactive = auto
   ui = true
   pager = true
+[core]
+  excludesfile = ~/.gitignore
+[diff]
+  ignoresubmodules = untracked
+  compactionHeuristic = true
 [merge]
   summary = true
 [push]
@@ -44,5 +54,9 @@
   autosetuprebase = always
 [hub]
   protocol = https
-[credential]
-	helper = osxkeychain
+[submodule]
+  fetchJobs = 4
+[gpg]
+  program = gpg1
+[pager]
+  branch = false
