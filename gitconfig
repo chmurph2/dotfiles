@@ -1,62 +1,59 @@
 # ~/.gitconfig_local template
 #
+# [core]
+#   editor = cursor --wait
+# [credential]
+#   helper = osxkeychain
+# [github]
+#   user =
+# [gpg]
+#   program = gpg
 # [user]
 #   email =
 #   name =
 #   signingkey =
-# [gpg]
-#   program = gpg
-# [core]
-#   editor = cursor --wait
-# [github]
-#   user =
-# [credential]
-#   helper = osxkeychain
 
-
-[include]
-  path = ~/.gitconfig_local
 [alias]
-  co = checkout
-  st = status
-  br = branch
-  w  = whatchanged
-  pf = push --force-with-lease
   amend = commit --amend
+  br = branch
+  co = checkout
+  pf = push --force-with-lease
+  st = status
   unstage = reset HEAD --
+  w  = whatchanged
 [apply]
   whitespace = nowarn
+[branch]
+  autosetuprebase = always
 [color]
-  diff = auto
-  status = auto
   branch = auto
+  diff = auto
   interactive = auto
-  ui = true
   pager = true
+  status = auto
+  ui = true
 [core]
   excludesfile = ~/.gitignore
 [diff]
-  ignoresubmodules = untracked
   compactionHeuristic = true
-[merge]
-  summary = true
-[push]
-  default = upstream
-[pull]
-  rebase = true
+  ignoresubmodules = untracked
 [fetch]
   prune = true
-[remote "origin"]
-  push = HEAD
-[core]
-  excludesfile = ~/.gitignore
-[branch]
-  autosetuprebase = always
-[hub]
-  protocol = https
-[submodule]
-  fetchJobs = 4
 [gpg]
   program = gpg1
+[hub]
+  protocol = https
+[include]
+  path = ~/.gitconfig_local
+[merge]
+  summary = true
 [pager]
   branch = false
+[pull]
+  rebase = true
+[push]
+  default = upstream
+[remote "origin"]
+  push = HEAD
+[submodule]
+  fetchJobs = 4
