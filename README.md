@@ -28,8 +28,9 @@ home directory, run `install.rb`.
 home directory manually, you can.
 
     $ cd ~/.dotfiles
-    $ ln -ns gemrc   ~/.gemrc
-    $ ln -ns autotest.d ~/.autotest.d
+    $ git submodule sync
+    $ git submodule update --init --recursive
+    $ ln -ns bashrc ~/.bashrc
 
 **(Option 3)** Just look around and pick and choose what you like for your own
   dotfiles.
