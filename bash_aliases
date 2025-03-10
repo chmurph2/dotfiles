@@ -72,7 +72,7 @@ function gu {
 
 function gco {
   if [ -z "$1" ]; then
-    git checkout master
+    git checkout master 2>/dev/null || git checkout main 2>/dev/null || echo "Neither master nor main branch exists"
   else
     git checkout $*
   fi
