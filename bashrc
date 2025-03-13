@@ -118,8 +118,15 @@ else
   }
 fi
 
+# Check if we're in a Docker environment
+if [ -f "/.dockerenv" ]; then
+  docker_emoji="📦"
+else
+  docker_emoji="∴"
+fi
+
 if [ -n "$BASH" ]; then
-  export PS1='\[\033[32m\]\n[\s: \w] ($(ruby_prompt)$(gemset_prompt)) $(git_prompt)\n\[\033[36m\][\u@\h \t]∴ \[\033[00m\]'
+  export PS1='\[\033[32m\]\n[\s: \w] ($(ruby_prompt)$(gemset_prompt)) $(git_prompt)\n\[\033[36m\][\u@\h \t]${docker_emoji} \[\033[00m\]'
 fi
 
 ############################################################
