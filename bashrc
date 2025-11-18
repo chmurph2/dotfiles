@@ -28,7 +28,11 @@ conditionally_prefix_path ~/bin/private
 
 # Prioritize any executables in `./bin`, but de-prioritize any executables in `.`
 # to avoid problems installing Rubies 2.7+
-PATH=./bin:${PATH}:.
+# This causes trouble with Cursor 2.x. Commented out for now.
+# if [ -d ./bin ]; then
+#   PATH=./bin:${PATH}
+# fi
+PATH=${PATH}:.
 
 ############################################################
 ## MANPATH
