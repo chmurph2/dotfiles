@@ -22,7 +22,7 @@ brew "shellcheck" # for shell script linting
 brew "tldr"
 brew "watch"
 brew "wget"
-brew "youtube-dl" # install manually, see personal notes
+# brew "youtube-dl" # install manually, see personal notes
 
 # casks
 cask "1password"
@@ -30,7 +30,6 @@ cask "acorn"
 cask "alfred"
 cask "anylist"
 cask "audiobook-builder"
-cask "authy" # Intel only
 cask "basecamp"
 cask "brainfm"
 cask "choosy"
@@ -41,11 +40,12 @@ cask "fantastical"
 cask "firefox"
 cask "google-chrome"
 cask "gpg-suite"
-cask "handbrake"
+cask "handbrake-app"
 cask "istat-menus"
 cask "iterm2"
 cask "maestral"
 cask "mimestream"
+cask "mullvad-vpn"
 cask "moom"
 cask "rocket"
 cask "soulver"
@@ -56,8 +56,8 @@ cask "vlc"
 
 # Mac App Store
 mas "Brother iPrint&Scan", id: 1193539993
-mas "Paprika Recipe Manager 3", id: 1303222628
-mas "Parcel - Delivery Tracking", id: 639968404 # needs update?
+# mas "Paprika Recipe Manager 3", id: 1303222628 # errors, install manually in App Store
+mas "Parcel - Delivery Tracking", id: 375589283
 mas "Speedtest by Ookla", id: 1153157709
 mas "Things 3", id: 904280696
-# mas "WiFi Explorer: Scanner", id: 494803304 # errors out
+# mas "WiFi Explorer: Scanner", id: 494803304 # errors, install manually in App Store
