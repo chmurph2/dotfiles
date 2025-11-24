@@ -42,6 +42,7 @@ cask "jordanbaird-ice@beta"
 cask "istat-menus"
 cask "iterm2"
 cask "maestral"
+# cask "magic-switch" # not available on Homebrew Cask at this time
 cask "mimestream"
 cask "moom"
 cask "orbstack"
