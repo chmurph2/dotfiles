@@ -30,6 +30,7 @@ cask "acorn"
 cask "alfred"
 cask "anylist"
 cask "audiobook-builder"
+# cask "backblaze" # download andinstall manually
 cask "basecamp"
 cask "brainfm"
 cask "choosy"
