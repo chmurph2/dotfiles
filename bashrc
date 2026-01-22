@@ -22,9 +22,9 @@ conditionally_prefix_path /opt/homebrew/bin
 conditionally_prefix_path /usr/local/sbin
 conditionally_prefix_path /usr/local/share/npm/bin
 conditionally_prefix_path /usr/texbin
-conditionally_prefix_path /usr/local/heroku/bin:$PATH
 conditionally_prefix_path ~/bin
 conditionally_prefix_path ~/bin/private
+conditionally_prefix_path ~/.local/bin
 
 # Prioritize any executables in `./bin`, but de-prioritize any executables in `.`
 # to avoid problems installing Rubies 2.7+

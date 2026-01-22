@@ -34,6 +34,8 @@ cask "audiobook-builder"
 cask "basecamp"
 cask "brainfm"
 cask "choosy"
+cask "claude"
+# cask "claude-code" # or curl -fsSL https://claude.ai/install.sh | bash
 cask "cleanshot"
 cask "cursor"
 cask "daisydisk"
