@@ -1,7 +1,7 @@
 # ~/.gitconfig_local template
 #
 # [core]
-#   editor = cursor --wait
+#   editor = code --wait
 # [commit]
 #   gpgsign = true
 # [credential]

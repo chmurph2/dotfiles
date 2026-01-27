@@ -30,9 +30,11 @@ public/stylesheets
 .rbenv-gemsets
 .powenv
 .foreman
+.claude/* # remove this if you want to commit Claude-specific files to projects
 
 ## ORACLE BS
 sqlnet.log
 
 ## HOMEBREW
 Brewfile.lock.json
+
