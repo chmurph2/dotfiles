@@ -61,6 +61,7 @@ cask "steam"
 cask "sublime-merge"
 cask "the-archive"
 cask "transmit"
+cask "visual-studio-code"
 cask "vlc"
 
 # Mac App Store
