@@ -30,7 +30,9 @@ public/stylesheets
 .rbenv-gemsets
 .powenv
 .foreman
-.claude/* # remove this if you want to commit Claude-specific files to projects
+### Claude – remove if you want to commit Claude-specific files to projects
+.claude/* 
+CLAUDE.md
 
 ## ORACLE BS
 sqlnet.log
