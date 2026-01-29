@@ -203,7 +203,7 @@ alias ttr="touch tmp/restart.txt"
  ## Claude Code
  ############################################################
 
-alias claude="claude --chrome"
+# alias claude="claude --chrome" # probably not needed, just set via /chrome
 
 ############################################################
 ## Miscellaneous
