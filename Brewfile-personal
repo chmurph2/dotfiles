@@ -45,9 +45,9 @@ cask "firefox"
 cask "google-chrome"
 cask "gpg-suite"
 cask "handbrake-app"
-cask "jordanbaird-ice@beta"
 cask "istat-menus"
 cask "iterm2"
+cask "jordanbaird-ice@beta"
 # cask "maestral" # crash prone, switching to officail Dropbox for now
 cask "mimestream"
 cask "mullvad-vpn"
@@ -65,6 +65,7 @@ cask "visual-studio-code"
 cask "vlc"
 
 # Mac App Store
+mas "Amazon Kindle", id: 302584613
 mas "Brother iPrint&Scan", id: 1193539993
 # mas "Paprika Recipe Manager 3", id: 1303222628 # errors, install manually in App Store
 mas "Parcel - Delivery Tracking", id: 375589283
