@@ -31,7 +31,8 @@ public/stylesheets
 .powenv
 .foreman
 ### Claude – remove if you want to commit Claude-specific files to projects
-.claude/* 
+.claude/*
+!.claude/skills/
 CLAUDE.md
 
 ## ORACLE BS
