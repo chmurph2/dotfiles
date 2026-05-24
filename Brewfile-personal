@@ -9,11 +9,13 @@ brew "bash-completion"
 brew "ffmpeg" # for youtube-dl audio extraction
 brew "git"
 brew "gh" # GitHub CLI
+brew "gnupg" # explicit (also a dep of gpgme/poppler); GPG for signed git commits
 brew "hub"
 brew "mas"
 brew "nodenv" # run nodenv init in your shell to enable
 brew "node-build"
 brew "php" # for https://github.com/gharlan/alfred-github-workflow
+brew "pinentry-mac" # GUI pinentry so GPG signing reads the passphrase from Keychain
 brew "pyenv" # run pyenv init in your shell to enable
 brew "prettier"
 brew "rbenv" # run rbenv init in your shell to enable
@@ -43,7 +45,6 @@ cask "dropbox"
 cask "fantastical"
 cask "firefox"
 cask "google-chrome"
-cask "gpg-suite"
 cask "handbrake-app"
 cask "istat-menus"
 cask "iterm2"

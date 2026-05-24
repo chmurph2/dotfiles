@@ -10,10 +10,22 @@ home = File.expand_path('~')
 
 Dir['*'].each do |file|
   next if file =~ /install/ || file =~ /README/
+  next if file == 'gnupg' # nested config, handled separately below
   if file =~ /^[A-Z]/
     target = File.join(home, file)
   else
     target = File.join(home, ".#{file}")
   end
   `ln -ns #{File.expand_path file} #{target}`
+end
+
+# Nested ~/.gnupg config. Symlink only the version-controlled config files into
+# ~/.gnupg — never the directory itself, since it holds the secret keyring.
+if Dir.exist?('gnupg')
+  gnupg_home = File.join(home, '.gnupg')
+  `mkdir -p #{gnupg_home} && chmod 700 #{gnupg_home}`
+  Dir['gnupg/*'].each do |file|
+    target = File.join(gnupg_home, File.basename(file))
+    `ln -nsf #{File.expand_path file} #{target}`
+  end
 end
