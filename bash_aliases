@@ -46,8 +46,18 @@ alias gst="git stash"
 alias gstu="git stash --include-untracked"
 alias gstp="git stash pop"
 alias grp="git remote prune"
-# delete all branches that have been merged into the current branch, except master/main
-alias gbdm='git branch --merged | grep -vE "^[* ] (master|main)$" | xargs -r git branch -d'
+# delete local branches already merged into the main branch (master/main),
+# keeping master, main, and the currently checked-out branch
+gbdm() {
+  local main cur
+  main=$(git symbolic-ref --quiet --short refs/remotes/origin/HEAD 2>/dev/null)
+  main=${main#origin/}
+  : "${main:=master}"
+  cur=$(git symbolic-ref --quiet --short HEAD)
+  git branch --merged "$main" --format='%(refname:short)' \
+    | grep -vxF -e master -e main -e "$cur" \
+    | xargs -r git branch -d
+}
 
 if [ `which hub 2> /dev/null` ]; then
   alias git="hub"
