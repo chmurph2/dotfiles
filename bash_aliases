@@ -46,36 +46,6 @@ alias gst="git stash"
 alias gstu="git stash --include-untracked"
 alias gstp="git stash pop"
 alias grp="git remote prune"
-# delete local branches whose commits are all already in the main branch
-# (master/main), keeping master, main, and the currently checked-out branch.
-# Pass -n to preview without deleting.
-gbdm() {
-  local main cur base branch unpicked dry=
-  [[ "$1" == "-n" ]] && dry=1
-
-  main=$(git symbolic-ref --quiet --short refs/remotes/origin/HEAD 2>/dev/null)
-  main=${main#origin/}
-  : "${main:=master}"
-  cur=$(git symbolic-ref --quiet --short HEAD)
-
-  # compare against the remote tip so a stale local main doesn't hide merged work
-  base="origin/$main"
-  git rev-parse --verify --quiet "$base" >/dev/null || base="$main"
-
-  while read -r branch; do
-    case "$branch" in master|main|"$main"|"$cur") continue ;; esac
-    # git cherry marks with '+' any commit lacking a patch-equivalent upstream, so
-    # squash- and rebase-merged branches come back clean where --merged never does
-    unpicked=$(git cherry "$base" "$branch" | grep -c '^+')
-    if [[ "$unpicked" -gt 0 ]]; then
-      printf 'keeping %s (%d commit(s) not in %s)\n' "$branch" "$unpicked" "$base"
-    elif [[ -n "$dry" ]]; then
-      printf 'would delete %s\n' "$branch"
-    else
-      git branch -D "$branch"
-    fi
-  done < <(git branch --format='%(refname:short)')
-}
 
 if [ `which hub 2> /dev/null` ]; then
   alias git="hub"
@@ -106,6 +76,37 @@ function gco {
   else
     git checkout $*
   fi
+}
+
+# delete local branches whose commits are all already in the main branch
+# (master/main), keeping master, main, and the currently checked-out branch.
+# Pass -n to preview without deleting.
+function gbdm {
+  local main cur base branch unpicked dry=
+  [[ "$1" == "-n" ]] && dry=1
+
+  main=$(git symbolic-ref --quiet --short refs/remotes/origin/HEAD 2>/dev/null)
+  main=${main#origin/}
+  : "${main:=master}"
+  cur=$(git symbolic-ref --quiet --short HEAD)
+
+  # compare against the remote tip so a stale local main doesn't hide merged work
+  base="origin/$main"
+  git rev-parse --verify --quiet "$base" >/dev/null || base="$main"
+
+  while read -r branch; do
+    case "$branch" in master|main|"$main"|"$cur") continue ;; esac
+    # git cherry marks with '+' any commit lacking a patch-equivalent upstream, so
+    # squash- and rebase-merged branches come back clean where --merged never does
+    unpicked=$(git cherry "$base" "$branch" | grep -c '^+')
+    if [[ "$unpicked" -gt 0 ]]; then
+      printf 'keeping %s (%d commit(s) not in %s)\n' "$branch" "$unpicked" "$base"
+    elif [[ -n "$dry" ]]; then
+      printf 'would delete %s\n' "$branch"
+    else
+      git branch -D "$branch"
+    fi
+  done < <(git branch --format='%(refname:short)')
 }
 
 function st {
