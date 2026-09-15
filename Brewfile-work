@@ -41,7 +41,6 @@ cask "fantastical"
 cask "firefox"
 cask "google-chrome"
 cask "gpg-suite"
-cask "jordanbaird-ice@beta"
 cask "istat-menus"
 cask "iterm2"
 # cask "maestral" # crash prone, switching to officail Dropbox for now
