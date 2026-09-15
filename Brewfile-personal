@@ -47,7 +47,6 @@ cask "google-chrome"
 cask "handbrake-app"
 cask "istat-menus"
 cask "iterm2"
-cask "jordanbaird-ice@beta"
 # cask "maestral" # crash prone, switching to officail Dropbox for now
 cask "mimestream"
 cask "mullvad-vpn"
