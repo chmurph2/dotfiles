@@ -43,13 +43,13 @@ cask "google-chrome"
 cask "gpg-suite"
 cask "istat-menus"
 cask "iterm2"
-# cask "maestral" # crash prone, switching to officail Dropbox for now
+# cask "maestral" # crash prone, switching to official Dropbox
 cask "mimestream"
 cask "moom"
 cask "orbstack"
 cask "postman"
 cask "rocket"
-cask "slack"
+# cask "slack" # managed by MDM, so don't install via brew
 cask "soulver"
 cask "sublime-merge"
 cask "sqlpro-studio"
