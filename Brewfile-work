@@ -25,7 +25,7 @@ brew "watch"
 brew "wget"
 
 # casks
-cask "1password"
+# cask "1password" # managed by MDM, don't install via brew
 cask "acorn"
 cask "alfred"
 cask "anylist"
@@ -40,7 +40,7 @@ cask "dropbox"
 cask "fantastical"
 cask "firefox"
 cask "gnome"
-cask "google-chrome"
+# cask "google-chrome" # managed by MDM, don't install via brew
 cask "gpg-suite"
 cask "istat-menus"
 cask "iterm2"
@@ -50,7 +50,7 @@ cask "moom"
 cask "orbstack"
 cask "postman"
 cask "rocket"
-# cask "slack" # managed by MDM, so don't install via brew
+# cask "slack" # managed by MDM, don't install via brew
 cask "soulver"
 cask "sublime-merge"
 cask "sqlpro-studio"
