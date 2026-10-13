@@ -30,11 +30,11 @@ cask "acorn"
 cask "alfred"
 cask "anylist"
 cask "brainfm"
+cask "bruno"
 cask "choosy"
 cask "claude"
 # cask "claude-code" # or curl -fsSL https://claude.ai/install.sh | bash
 cask "cleanshot"
-cask "cursor"
 cask "daisydisk"
 cask "dropbox"
 cask "fantastical"
@@ -48,12 +48,10 @@ cask "iterm2"
 cask "mimestream"
 cask "moom"
 cask "orbstack"
-cask "postman"
 cask "rocket"
 # cask "slack" # managed by MDM, don't install via brew
 cask "soulver"
 cask "sublime-merge"
-cask "sqlpro-studio"
 cask "the-archive"
 cask "transmit"
 cask "visual-studio-code"
@@ -61,6 +59,7 @@ cask "vlc"
 cask "zoom"
 
 # Mac App Store
+# mas "Froq", id: 894339623 # fails, manually install instead
 mas "Parcel - Delivery Tracking", id: 375589283
 mas "Speedtest by Ookla", id: 1153157709
 mas "Things 3", id: 904280696
