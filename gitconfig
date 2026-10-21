@@ -53,6 +53,7 @@
   rebase = true
 [push]
   default = upstream
+	useForceIfIncludes = true
 [remote "origin"]
   push = HEAD
 [submodule]
